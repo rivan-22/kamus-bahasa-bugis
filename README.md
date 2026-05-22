@@ -1,20 +1,20 @@
-# 📚 Kamus Bugis
+# Kamus Bugis
 
 A digital dictionary application for the Bugis language built with Semantic Web technology. The application features an AI-powered Q&A system using Groq API for intelligent querying about the Bugis language. It integrates Apache Jena Fuseki (RDF database), Spring Boot Backend, and React Frontend.
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
-- 🔍 **Dynamic Word Search**: Search Bugis words with Indonesian/English translations
-- 🤖 **Ask AI (RAG)**: AI-powered Q&A about the Bugis language using Groq API
-- 📱 **Responsive Design**: Mobile-friendly and user-friendly interface
-- 🔗 **Semantic RDF**: Database using RDF for semantic search capabilities
-- ⚡ **Docker Ready**: Quick setup with Docker Compose
+- **Dynamic Word Search**: Search Bugis words with Indonesian/English translations
+- **Ask AI (RAG)**: AI-powered Q&A about the Bugis language using Groq API
+- **Responsive Design**: Mobile-friendly and user-friendly interface
+- **Semantic RDF**: Database using RDF for semantic search capabilities
+- **Docker Ready**: Quick setup with Docker Compose
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 Before running the application, ensure you have installed:
 
@@ -45,7 +45,7 @@ pnpm --version
 
 ---
 
-## 🚀 Quickstart - Running with Docker (Recommended)
+## Quickstart - Running with Docker (Recommended)
 
 ### 1. Clone Repository
 
@@ -85,9 +85,9 @@ docker-compose up -d --build
 ```
 
 **Running services:**
-- 🔵 **Fuseki**: http://localhost:3030 (RDF Database)
-- 🟦 **Backend**: http://localhost:8080 (Spring Boot API)
-- ⚛️ **Frontend**: http://localhost:5173 (React Dev Server) or http://localhost (Production)
+- **Fuseki**: http://localhost:3030 (RDF Database)
+- **Backend**: http://localhost:8080 (Spring Boot API)
+- **Frontend**: http://localhost:5173 (React Dev Server) or http://localhost (Production)
 
 ### 4. Access the Application
 
@@ -109,7 +109,7 @@ docker-compose down -v
 
 ---
 
-## 💻 Local Development Setup (Without Docker)
+## Local Development Setup (Without Docker)
 
 For development with hot-reload, run services separately:
 
@@ -202,7 +202,7 @@ bugis-dictionary/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Backend Testing
 
@@ -227,7 +227,7 @@ pnpm test
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### 1. Backend cannot connect to Fuseki
 
@@ -303,7 +303,7 @@ services:
 
 ---
 
-## 📖 Website Demo Documentation
+## Website Demo Documentation
 
 ### Demo Features & Flow
 
