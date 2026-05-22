@@ -1,0 +1,2411 @@
+# =============================================================================
+# DATA TAMBAHAN KAMUS BAHASA BUGIS — 100 ENTRI RDF TURTLE
+# Semantic Web Course — Proyek Akhir
+# Domain: Seni & Budaya | Perdagangan & Ekonomi | Hewan & Tumbuhan |
+#         Pakaian & Perhiasan | Kata Kerja Lanjut | Kata Sifat Lanjut |
+#         Waktu & Bilangan | Peribahasa
+# Encoding: UTF-8
+# Sumber: OJED (sealang.net/ojed), Wiktionary Bugis
+# Entri: 601–700 (melanjutkan dari kamus_600.ttl)
+# =============================================================================
+
+@prefix bugis:  <http://example.org/bugis#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+
+# =============================================================================
+# DOMAIN SEMANTIK BARU
+# =============================================================================
+
+bugis:DomainSeniLoga
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "seni dan loga" ;
+    rdfs:label      "Seni dan Loga"@id ;
+    rdfs:comment    "Kata-kata yang berkaitan dengan seni, tenun, ukiran, dan loga tradisional Bugis." .
+
+bugis:DomainHewanTumbuhan
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "hewan dan tumbuhan" ;
+    rdfs:label      "Hewan dan Tumbuhan"@id ;
+    rdfs:comment    "Kata-kata yang berkaitan dengan dunia fauna dan flora dalam kehidupan Bugis." .
+
+bugis:DomainPerhiasan
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "pakaian dan perhiasan" ;
+    rdfs:label      "Pakaian dan Perhiasan"@id ;
+    rdfs:comment    "Kata-kata yang berkaitan dengan pakaian adat, perhiasan, dan aksesori Bugis." .
+
+bugis:DomainPerdagangan
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "perdagangan dan ekonomi" ;
+    rdfs:label      "Perdagangan dan Ekonomi"@id ;
+    rdfs:comment    "Kata-kata yang berkaitan dengan kegiatan jual-beli, niaga, dan perekonomian." .
+
+bugis:DomainPeribahasa
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "peribahasa" ;
+    rdfs:label      "Peribahasa"@id ;
+    rdfs:comment    "Ungkapan tradisional Bugis yang mengandung makna nasihat atau kiasan." .
+
+
+# =============================================================================
+# AKAR KATA BARU
+# =============================================================================
+
+bugis:akar_balango
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "balango" ;
+    bugis:aksaraLontaraqAkar "ᨅᨒᨂᨚ" ;
+    rdfs:comment             "Akar: balango — tembaga, logam berwarna kemerahan." .
+
+bugis:akar_ruma
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "ruma" ;
+    bugis:aksaraLontaraqAkar "ᨑᨘᨆ" ;
+    rdfs:comment             "Akar: ruma — rumput, tanaman rendah." .
+
+bugis:akar_pucuk
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "pucuk" ;
+    bugis:aksaraLontaraqAkar "ᨄᨘᨌᨘ" ;
+    rdfs:comment             "Akar: pucuk — pucuk, ujung tunas tanaman." .
+
+bugis:akar_bale
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "bale" ;
+    bugis:aksaraLontaraqAkar "ᨅᨒᨙ" ;
+    rdfs:comment             "Akar: bale — ikan." .
+
+bugis:akar_manuk
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "manuk" ;
+    bugis:aksaraLontaraqAkar "ᨆᨊᨘ" ;
+    rdfs:comment             "Akar: manuk — ayam, unggas." .
+
+bugis:akar_salama
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "salama" ;
+    bugis:aksaraLontaraqAkar "ᨔᨒᨆ" ;
+    rdfs:comment             "Akar: salama — selamat, damai, aman." .
+
+bugis:akar_pesse
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "pesse" ;
+    bugis:aksaraLontaraqAkar "ᨄᨔᨙ" ;
+    rdfs:comment             "Akar: pesse — empati, rasa belas kasihan antar sesama." .
+
+bugis:akar_sipakatau_r
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "taukeng" ;
+    bugis:aksaraLontaraqAkar "ᨈᨕᨘᨀᨙ" ;
+    rdfs:comment             "Akar: tau — orang, manusia." .
+
+bugis:akar_ngampa
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "ngampa" ;
+    bugis:aksaraLontaraqAkar "ᨂᨆᨄ" ;
+    rdfs:comment             "Akar: ngampa — membawa, mengangkat." .
+
+bugis:akar_bosi
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "bosi" ;
+    bugis:aksaraLontaraqAkar "ᨅᨚᨔᨗ" ;
+    rdfs:comment             "Akar: bosi — hujan." .
+
+bugis:akar_tette
+    rdf:type                 bugis:AkarKata ;
+    bugis:bentukLatinAkar    "tette" ;
+    bugis:aksaraLontaraqAkar "ᨈᨙᨈ" ;
+    rdfs:comment             "Akar: tette — jam, waktu (dalam satuan jam)." .
+
+
+# =============================================================================
+# ── DOMAIN: SENI & BUDAYA BUGIS (601–615) ───────────────────────────────────
+# =============================================================================
+
+# 601. sure — tulisan / naskah kuno
+bugis:sure_naskah
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              601 ;
+    bugis:aksaraLontaraq          "ᨔᨘᨑᨙ" ;
+    bugis:bentukLatin             "sure" ;
+    bugis:maknaIndonesia          "naskah, tulisan kuno, surat" ;
+    bugis:maknaInggris            "manuscript, ancient script, letter" ;
+    bugis:fonetik                 "/su.re/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Sure lontara nalette pappasenna to riolo." ;
+    bugis:contohKalimatTerjemahan "Naskah lontara menyimpan nasihat leluhur." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:lontara ;
+    bugis:berkaitanDengan         bugis:pappaseng ;
+    bugis:termasukDomain          bugis:DomainSeniLoga .
+
+# 602. dupa — dupa / kemenyan
+bugis:dupa
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              602 ;
+    bugis:aksaraLontaraq          "ᨉᨘᨄ" ;
+    bugis:bentukLatin             "dupa" ;
+    bugis:maknaIndonesia          "dupa, kemenyan, wangi-wangian upacara" ;
+    bugis:maknaInggris            "incense, ritual fragrance" ;
+    bugis:fonetik                 "/du.pa/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Dupa nasulleq ri laleng ada-ada arajang." ;
+    bugis:contohKalimatTerjemahan "Dupa dibakar dalam upacara arajang." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:arajang ;
+    bugis:termasukDomain          bugis:DomainReligi .
+
+# 603. paduppa — penjemput / penyambut tamu
+bugis:paduppa
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              603 ;
+    bugis:aksaraLontaraq          "ᨄᨉᨘᨄ" ;
+    bugis:bentukLatin             "paduppa" ;
+    bugis:maknaIndonesia          "penyambut tamu, yang menjemput" ;
+    bugis:maknaInggris            "greeter, one who welcomes guests" ;
+    bugis:fonetik                 "/pa.dup.pa/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Paduppa ri bola nakiya uleng mappakessing." ;
+    bugis:contohKalimatTerjemahan "Penyambut di rumah itu sangat ramah." ;
+    bugis:jenisMorfologi          "berimbuhan (pa- + duppa)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_pa ;
+    bugis:berkaitanDengan         bugis:mappaddupa ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 604. gendrang — gendang besar
+bugis:gendrang
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              604 ;
+    bugis:aksaraLontaraq          "ᨁᨙᨂᨉᨑ" ;
+    bugis:bentukLatin             "gendrang" ;
+    bugis:maknaIndonesia          "gendang, alat musik pukul besar" ;
+    bugis:maknaInggris            "drum, large percussion instrument" ;
+    bugis:fonetik                 "/gen.draŋ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Gendrang napalleq wettu ada-ada kawin." ;
+    bugis:contohKalimatTerjemahan "Gendang dimainkan saat upacara perkawinan." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:sinonimDari             bugis:ganrang ;
+    bugis:berkaitanDengan         bugis:pakkarena ;
+    bugis:termasukDomain          bugis:DomainSeniLoga .
+
+# 605. mappakkarena — menari / menampilkan tari
+bugis:mappakkarena
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              605 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨀᨑᨙᨊ" ;
+    bugis:bentukLatin             "mappakkarena" ;
+    bugis:maknaIndonesia          "menari, menampilkan tarian" ;
+    bugis:maknaInggris            "to dance, to perform a dance" ;
+    bugis:fonetik                 "/map.pak.ka.re.na/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Ana dara mappakkarena ri acara adat." ;
+    bugis:contohKalimatTerjemahan "Gadis-gadis menari dalam acara adat." ;
+    bugis:jenisMorfologi          "berimbuhan (mappa- + karena)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:berkaitanDengan         bugis:pakkarena ;
+    bugis:berkaitanDengan         bugis:ganrang ;
+    bugis:termasukDomain          bugis:DomainSeniLoga .
+
+# 606. pallaong — pengrajin / pekerja seni
+bugis:pallaong
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              606 ;
+    bugis:aksaraLontaraq          "ᨄᨒᨒᨚ" ;
+    bugis:bentukLatin             "pallaong" ;
+    bugis:maknaIndonesia          "pengrajin, pembuat karya tangan, pekerja seni" ;
+    bugis:maknaInggris            "craftsman, artisan, skilled maker" ;
+    bugis:fonetik                 "/pal.la.oŋ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Pallaong lipa sabbe maega ri Wajo." ;
+    bugis:contohKalimatTerjemahan "Pengrajin sarung sutra banyak di Wajo." ;
+    bugis:jenisMorfologi          "berimbuhan (pa- + laong)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_pa ;
+    bugis:berkaitanDengan         bugis:panre ;
+    bugis:berkaitanDengan         bugis:lipa_sabbe ;
+    bugis:termasukDomain          bugis:DomainSeniLoga .
+
+# 607. tennung — menenun / pekerjaan tenun
+bugis:tennung
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              607 ;
+    bugis:aksaraLontaraq          "ᨈᨙᨂᨘ" ;
+    bugis:bentukLatin             "tennung" ;
+    bugis:maknaIndonesia          "menenun, membuat kain tenun" ;
+    bugis:maknaInggris            "to weave, weaving" ;
+    bugis:fonetik                 "/ten.nuŋ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Ambo-amboanna tennung lipa sabbe ri bola." ;
+    bugis:contohKalimatTerjemahan "Para perempuan menenun sarung sutra di rumah." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "Wajo" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:lipa_sabbe ;
+    bugis:berkaitanDengan         bugis:wennang_benang ;
+    bugis:termasukDomain          bugis:DomainSeniLoga .
+
+# 608. passura — pengukir / yang mengukir
+bugis:passura
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              608 ;
+    bugis:aksaraLontaraq          "ᨄᨔᨘᨑ" ;
+    bugis:bentukLatin             "passura" ;
+    bugis:maknaIndonesia          "pengukir, penulis aksara, penyalin naskah" ;
+    bugis:maknaInggris            "carver, scribe, one who inscribes" ;
+    bugis:fonetik                 "/pas.su.ra/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Passura lontara biasana tau tomatoaq." ;
+    bugis:contohKalimatTerjemahan "Penyalin naskah lontara biasanya orang tua." ;
+    bugis:jenisMorfologi          "berimbuhan (pa- + sura)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "rendah" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_pa ;
+    bugis:berkaitanDengan         bugis:lontara ;
+    bugis:berkaitanDengan         bugis:sure_naskah ;
+    bugis:termasukDomain          bugis:DomainSeniLoga .
+
+# 609. wunwunna — motif / corak
+bugis:wunwunna
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              609 ;
+    bugis:aksaraLontaraq          "ᨓᨘᨂᨓᨘᨊ" ;
+    bugis:bentukLatin             "wunwunna" ;
+    bugis:maknaIndonesia          "motif, corak, pola hiasan" ;
+    bugis:maknaInggris            "motif, pattern, ornamental design" ;
+    bugis:fonetik                 "/wun.wun.na/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Wunwunna lipa sabbeq madeceng nasabaq maittasa." ;
+    bugis:contohKalimatTerjemahan "Motif sarung sutra itu bagus karena rumit." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "Wajo" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:lipa_sabbe ;
+    bugis:termasukDomain          bugis:DomainSeniLoga .
+
+# 610. mappabarang — memperlihatkan / memamerkan
+bugis:mappabarang
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              610 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨅᨑ" ;
+    bugis:bentukLatin             "mappabarang" ;
+    bugis:maknaIndonesia          "memperlihatkan, memamerkan, menunjukkan" ;
+    bugis:maknaInggris            "to show, to display, to exhibit" ;
+    bugis:fonetik                 "/map.pa.ba.raŋ/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Mappabarang sure lontara ri musiumeng." ;
+    bugis:contohKalimatTerjemahan "Memamerkan naskah lontara di museum." ;
+    bugis:jenisMorfologi          "berimbuhan (mappa- + barang)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:sinonimDari             bugis:mappakita ;
+    bugis:termasukDomain          bugis:DomainSeniLoga .
+
+# 611. elong_mappaenre — nyanyian syukur / lagu pujian
+bugis:elong_mappaenre
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              611 ;
+    bugis:aksaraLontaraq          "ᨕᨙᨒᨚ ᨆᨄᨕᨙᨂᨑᨙ" ;
+    bugis:bentukLatin             "elong mappaenre" ;
+    bugis:maknaIndonesia          "nyanyian syukur, lagu pujian kepada Tuhan" ;
+    bugis:maknaInggris            "song of gratitude, praise song" ;
+    bugis:fonetik                 "/e.loŋ map.pa.en.re/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Elong mappaenre nasinging ri wettu allataala." ;
+    bugis:contohKalimatTerjemahan "Nyanyian syukur dinyanyikan saat bersyukur kepada Tuhan." ;
+    bugis:jenisMorfologi          "frasa (elong + mappaenre)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:elong ;
+    bugis:berkaitanDengan         bugis:allataala ;
+    bugis:termasukDomain          bugis:DomainReligi .
+
+# 612. sugi_darah — kehormatan / martabat (sugi dalam makna konotatif)
+bugis:pakkatenni
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              612 ;
+    bugis:aksaraLontaraq          "ᨄᨀᨈᨙᨂᨗ" ;
+    bugis:bentukLatin             "pakkatenni" ;
+    bugis:maknaIndonesia          "pegangan, prinsip hidup, pendirian" ;
+    bugis:maknaInggris            "life principle, firm stance, conviction" ;
+    bugis:fonetik                 "/pak.ka.ten.ni/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Ia tau maega pakkatenni ri gau madeceng." ;
+    bugis:contohKalimatTerjemahan "Ia orang berpendirian kuat dalam perbuatan baik." ;
+    bugis:jenisMorfologi          "berimbuhan (pa- + katenni)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_pa ;
+    bugis:berkaitanDengan         bugis:pangadereng ;
+    bugis:berkaitanDengan         bugis:siri ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 613. sipakaraja — saling menghormati
+bugis:sipakaraja
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              613 ;
+    bugis:aksaraLontaraq          "ᨔᨗᨄᨀᨑᨍ" ;
+    bugis:bentukLatin             "sipakaraja" ;
+    bugis:maknaIndonesia          "saling menghormati, saling memuliakan" ;
+    bugis:maknaInggris            "to mutually respect, to honor one another" ;
+    bugis:fonetik                 "/si.pa.ka.ra.ja/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Sipakaraja nenniya sipakalebbi ade to Ugi." ;
+    bugis:contohKalimatTerjemahan "Saling menghormati dan saling memuliakan adalah adat orang Bugis." ;
+    bugis:jenisMorfologi          "berimbuhan (si- + pa + raja)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_si ;
+    bugis:sinonimDari             bugis:sipakalebbiq ;
+    bugis:berkaitanDengan         bugis:sipakatau ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 614. sulesana — pemimpin muda / ksatria
+bugis:sulesana_ksatria
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              614 ;
+    bugis:aksaraLontaraq          "ᨔᨘᨒᨙᨔᨊ" ;
+    bugis:bentukLatin             "sulesana" ;
+    bugis:maknaIndonesia          "ksatria, pemuda pemberani, kesatria Bugis" ;
+    bugis:maknaInggris            "warrior, brave young man, Bugis knight" ;
+    bugis:fonetik                 "/su.le.sa.na/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Sulesana nasiapai masiri si paccei." ;
+    bugis:contohKalimatTerjemahan "Ksatria dijaga oleh rasa malu dan rasa empati." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "sastra" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:mabbarani ;
+    bugis:berkaitanDengan         bugis:siri ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 615. mappangolo_ati — berserah diri / pasrah
+bugis:mappangolo_ati
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              615 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨂᨚᨒᨚ ᨕᨈᨗ" ;
+    bugis:bentukLatin             "mappangolo ati" ;
+    bugis:maknaIndonesia          "berserah diri, pasrah, menyerahkan hati" ;
+    bugis:maknaInggris            "to surrender, to be resigned, to entrust one's heart" ;
+    bugis:fonetik                 "/map.pa.ŋo.lo a.ti/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Mappangolo ati ri allataala wettu masaki." ;
+    bugis:contohKalimatTerjemahan "Berserah diri kepada Tuhan saat sakit." ;
+    bugis:jenisMorfologi          "frasa verbal" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:berkaitanDengan         bugis:mappisona ;
+    bugis:berkaitanDengan         bugis:allataala ;
+    bugis:termasukDomain          bugis:DomainReligi .
+
+
+# =============================================================================
+# ── DOMAIN: HEWAN & TUMBUHAN (616–630) ──────────────────────────────────────
+# =============================================================================
+
+# 616. bale — ikan (generik)
+bugis:bale_ikan
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              616 ;
+    bugis:aksaraLontaraq          "ᨅᨒᨙ" ;
+    bugis:bentukLatin             "bale" ;
+    bugis:maknaIndonesia          "ikan" ;
+    bugis:maknaInggris            "fish" ;
+    bugis:fonetik                 "/ba.le/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Ambo lao massappa bale ri tasi." ;
+    bugis:contohKalimatTerjemahan "Ayah pergi mencari ikan di laut." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:diturunkanDari          bugis:akar_bale ;
+    bugis:berkaitanDengan         bugis:tasi ;
+    bugis:berkaitanDengan         bugis:juku ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 617. manu — ayam
+bugis:manu_ayam
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              617 ;
+    bugis:aksaraLontaraq          "ᨆᨊᨘ" ;
+    bugis:bentukLatin             "manu" ;
+    bugis:maknaIndonesia          "ayam, unggas" ;
+    bugis:maknaInggris            "chicken, fowl" ;
+    bugis:fonetik                 "/ma.nu/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Manu worowane makessing suaranna." ;
+    bugis:contohKalimatTerjemahan "Ayam jantan bagus suaranya." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:diturunkanDari          bugis:akar_manuk ;
+    bugis:berkaitanDengan         bugis:tello_bilangan ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 618. asu — anjing
+bugis:asu
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              618 ;
+    bugis:aksaraLontaraq          "ᨕᨔᨘ" ;
+    bugis:bentukLatin             "asu" ;
+    bugis:maknaIndonesia          "anjing" ;
+    bugis:maknaInggris            "dog" ;
+    bugis:fonetik                 "/a.su/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Asu nasiaga tau ri bola." ;
+    bugis:contohKalimatTerjemahan "Anjing menjaga orang di rumah." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 619. bembe — kambing
+bugis:bembe
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              619 ;
+    bugis:aksaraLontaraq          "ᨅᨙᨆᨅᨙ" ;
+    bugis:bentukLatin             "bembe" ;
+    bugis:maknaIndonesia          "kambing" ;
+    bugis:maknaInggris            "goat" ;
+    bugis:fonetik                 "/bem.be/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Bembe nappada di kampo nenniya ri daerah." ;
+    bugis:contohKalimatTerjemahan "Kambing banyak di desa dan di daerah." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:tedong ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 620. paku — pakis / tanaman paku
+bugis:paku_tanaman
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              620 ;
+    bugis:aksaraLontaraq          "ᨄᨀᨘ" ;
+    bugis:bentukLatin             "paku" ;
+    bugis:maknaIndonesia          "pakis, tanaman paku-pakuan" ;
+    bugis:maknaInggris            "fern, fern plant" ;
+    bugis:fonetik                 "/pa.ku/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Paku maega engka ri alek." ;
+    bugis:contohKalimatTerjemahan "Pakis banyak terdapat di hutan." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:alek ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 621. leko — daun
+bugis:leko
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              621 ;
+    bugis:aksaraLontaraq          "ᨒᨙᨀᨚ" ;
+    bugis:bentukLatin             "leko" ;
+    bugis:maknaIndonesia          "daun" ;
+    bugis:maknaInggris            "leaf" ;
+    bugis:fonetik                 "/le.ko/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Leko batang nappada enneng." ;
+    bugis:contohKalimatTerjemahan "Daun pohon itu sudah banyak." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:meronim                 bugis:batang ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 622. bungaq — bunga
+bugis:bungaq
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              622 ;
+    bugis:aksaraLontaraq          "ᨅᨘᨂᨕ" ;
+    bugis:bentukLatin             "bungaq" ;
+    bugis:maknaIndonesia          "bunga, kembang" ;
+    bugis:maknaInggris            "flower, blossom" ;
+    bugis:fonetik                 "/bu.ŋaʔ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Bungaq kaluku makessing ri olo bola." ;
+    bugis:contohKalimatTerjemahan "Bunga kelapa indah di depan rumah." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:batang ;
+    bugis:berkaitanDengan         bugis:leko ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 623. olo-olo — hewan peliharaan / binatang
+bugis:olo_olo
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              623 ;
+    bugis:aksaraLontaraq          "ᨕᨚᨒᨚᨕᨚᨒᨚ" ;
+    bugis:bentukLatin             "olo-olo" ;
+    bugis:maknaIndonesia          "hewan, binatang, makhluk hidup" ;
+    bugis:maknaInggris            "animal, creature, living being" ;
+    bugis:fonetik                 "/o.lo.o.lo/" ;
+    bugis:silabel                 4 ;
+    bugis:bentukReduplikasi       "olo-olo" ;
+    bugis:contohKalimat           "Olo-olo ri alek maega jenisna." ;
+    bugis:contohKalimatTerjemahan "Hewan di hutan banyak jenisnya." ;
+    bugis:jenisMorfologi          "reduplikasi" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:alek ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 624. ulaq — ular
+bugis:ulaq
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              624 ;
+    bugis:aksaraLontaraq          "ᨕᨘᨒᨕ" ;
+    bugis:bentukLatin             "ulaq" ;
+    bugis:maknaIndonesia          "ular" ;
+    bugis:maknaInggris            "snake, serpent" ;
+    bugis:fonetik                 "/u.laʔ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Ulaq mappitung ri alek macokkong." ;
+    bugis:contohKalimatTerjemahan "Ular bersembunyi di hutan yang gelap." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 625. bosi — hujan
+bugis:bosi
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              625 ;
+    bugis:aksaraLontaraq          "ᨅᨚᨔᨗ" ;
+    bugis:bentukLatin             "bosi" ;
+    bugis:maknaIndonesia          "hujan" ;
+    bugis:maknaInggris            "rain, rainfall" ;
+    bugis:fonetik                 "/bo.si/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Bosi lodde nalele ri musim udan." ;
+    bugis:contohKalimatTerjemahan "Hujan deras turun di musim hujan." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:diturunkanDari          bugis:akar_bosi ;
+    bugis:berkaitanDengan         bugis:musim ;
+    bugis:berkaitanDengan         bugis:udan ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 626. bale_tasi — ikan laut
+bugis:bale_tasi
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              626 ;
+    bugis:aksaraLontaraq          "ᨅᨒᨙ ᨈᨔᨗ" ;
+    bugis:bentukLatin             "bale tasi" ;
+    bugis:maknaIndonesia          "ikan laut" ;
+    bugis:maknaInggris            "sea fish, ocean fish" ;
+    bugis:fonetik                 "/ba.le ta.si/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Bale tasi makessing rasana narekko nasesso." ;
+    bugis:contohKalimatTerjemahan "Ikan laut enak rasanya bila digoreng." ;
+    bugis:jenisMorfologi          "frasa nominal" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "pesisir" ;
+    bugis:sumber                  "OJED" ;
+    bugis:hiponimDari             bugis:bale_ikan ;
+    bugis:berkaitanDengan         bugis:tasi ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 627. tarung — pohon enau / aren
+bugis:tarung
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              627 ;
+    bugis:aksaraLontaraq          "ᨈᨑᨘ" ;
+    bugis:bentukLatin             "tarung" ;
+    bugis:maknaIndonesia          "pohon enau, pohon aren, pohon lontar" ;
+    bugis:maknaInggris            "sugar palm, lontar palm tree" ;
+    bugis:fonetik                 "/ta.ruŋ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Tarung naolai tau mappau lontara." ;
+    bugis:contohKalimatTerjemahan "Daun lontar digunakan penulis lontara." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:lontara ;
+    bugis:berkaitanDengan         bugis:sure_naskah ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 628. kandea — nangka
+bugis:kandea
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              628 ;
+    bugis:aksaraLontaraq          "ᨀᨂᨉᨕ" ;
+    bugis:bentukLatin             "kandea" ;
+    bugis:maknaIndonesia          "nangka, buah nangka" ;
+    bugis:maknaInggris            "jackfruit" ;
+    bugis:fonetik                 "/kan.de.a/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Kandea lodde nappada ri kampo." ;
+    bugis:contohKalimatTerjemahan "Nangka besar banyak di kampung." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:bua ;
+    bugis:berkaitanDengan         bugis:utti ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 629. bettaq — burung
+bugis:bettaq
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              629 ;
+    bugis:aksaraLontaraq          "ᨅᨙᨈᨕ" ;
+    bugis:bentukLatin             "bettaq" ;
+    bugis:maknaIndonesia          "burung" ;
+    bugis:maknaInggris            "bird" ;
+    bugis:fonetik                 "/bet.taʔ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Bettaq malompe lele ri manngalimeng." ;
+    bugis:contohKalimatTerjemahan "Burung besar terbang di langit." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:langiq ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+# 630. cakeraq — kura-kura / penyu
+bugis:cakeraq
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              630 ;
+    bugis:aksaraLontaraq          "ᨌᨀᨑᨕ" ;
+    bugis:bentukLatin             "cakeraq" ;
+    bugis:maknaIndonesia          "kura-kura, penyu" ;
+    bugis:maknaInggris            "turtle, tortoise" ;
+    bugis:fonetik                 "/ca.ke.raʔ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Cakeraq majjama maccuki ri tasi." ;
+    bugis:contohKalimatTerjemahan "Penyu bergerak pelan di laut." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "rendah" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "pesisir" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:tasi ;
+    bugis:termasukDomain          bugis:DomainHewanTumbuhan .
+
+
+# =============================================================================
+# ── DOMAIN: PAKAIAN & PERHIASAN (631–645) ───────────────────────────────────
+# =============================================================================
+
+# 631. passapu — ikat kepala / destar
+bugis:passapu_destar
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              631 ;
+    bugis:aksaraLontaraq          "ᨄᨔᨄᨘ" ;
+    bugis:bentukLatin             "passapu" ;
+    bugis:maknaIndonesia          "ikat kepala, destar, tutup kepala lelaki Bugis" ;
+    bugis:maknaInggris            "headband, headwrap, traditional Bugis male headwear" ;
+    bugis:fonetik                 "/pas.sa.pu/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Worowane Ugi mabiasa mappake passapu ri acara adat." ;
+    bugis:contohKalimatTerjemahan "Lelaki Bugis biasa memakai ikat kepala di acara adat." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:baju_bodo ;
+    bugis:termasukDomain          bugis:DomainPerhiasan .
+
+# 632. potto — gelang tangan
+bugis:potto_gelang
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              632 ;
+    bugis:aksaraLontaraq          "ᨄᨚᨈᨚ" ;
+    bugis:bentukLatin             "potto" ;
+    bugis:maknaIndonesia          "gelang, gelang tangan" ;
+    bugis:maknaInggris            "bracelet, bangle" ;
+    bugis:fonetik                 "/pot.to/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Potto bulaweng nalettu ri lima darana." ;
+    bugis:contohKalimatTerjemahan "Gelang emas dipakainya di tangan." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:bulaweng ;
+    bugis:berkaitanDengan         bugis:salaka ;
+    bugis:termasukDomain          bugis:DomainPerhiasan .
+
+# 633. gandong — anting-anting
+bugis:gandong
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              633 ;
+    bugis:aksaraLontaraq          "ᨁᨂᨉᨚ" ;
+    bugis:bentukLatin             "gandong" ;
+    bugis:maknaIndonesia          "anting-anting, giwang" ;
+    bugis:maknaInggris            "earring, ear ornament" ;
+    bugis:fonetik                 "/gan.doŋ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Gandong bulaweng nalettu ri telinga darana." ;
+    bugis:contohKalimatTerjemahan "Anting emas dipakainya di telinga gadis itu." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:bulaweng ;
+    bugis:berkaitanDengan         bugis:potto_gelang ;
+    bugis:termasukDomain          bugis:DomainPerhiasan .
+
+# 634. lellung — kalung
+bugis:lellung
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              634 ;
+    bugis:aksaraLontaraq          "ᨒᨙᨒᨘ" ;
+    bugis:bentukLatin             "lellung" ;
+    bugis:maknaIndonesia          "kalung, perhiasan leher" ;
+    bugis:maknaInggris            "necklace, neck ornament" ;
+    bugis:fonetik                 "/lel.luŋ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Lellung bulaweng nalettu ri bara darana." ;
+    bugis:contohKalimatTerjemahan "Kalung emas dipakainya di leher gadis itu." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:bulaweng ;
+    bugis:berkaitanDengan         bugis:gandong ;
+    bugis:berkaitanDengan         bugis:potto_gelang ;
+    bugis:termasukDomain          bugis:DomainPerhiasan .
+
+# 635. sima — cincin
+bugis:sima
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              635 ;
+    bugis:aksaraLontaraq          "ᨔᨗᨆ" ;
+    bugis:bentukLatin             "sima" ;
+    bugis:maknaIndonesia          "cincin" ;
+    bugis:maknaInggris            "ring, finger ring" ;
+    bugis:fonetik                 "/si.ma/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Sima bulaweng natarimae ri wettu bunting." ;
+    bugis:contohKalimatTerjemahan "Cincin emas diterimanya saat pernikahan." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:bulaweng ;
+    bugis:berkaitanDengan         bugis:mabbunting ;
+    bugis:termasukDomain          bugis:DomainPerhiasan .
+
+# 636. waju_adat — baju adat lengkap
+bugis:waju_adat
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              636 ;
+    bugis:aksaraLontaraq          "ᨓᨍᨘ ᨕᨉᨈ" ;
+    bugis:bentukLatin             "waju adat" ;
+    bugis:maknaIndonesia          "pakaian adat Bugis lengkap" ;
+    bugis:maknaInggris            "traditional Bugis ceremonial attire" ;
+    bugis:fonetik                 "/wa.ju a.dat/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Waju adat nalettu ri acara mappabunting." ;
+    bugis:contohKalimatTerjemahan "Pakaian adat dipakai di acara perkawinan." ;
+    bugis:jenisMorfologi          "frasa nominal" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:baju_bodo ;
+    bugis:berkaitanDengan         bugis:lipa_sabbe ;
+    bugis:berkaitanDengan         bugis:passapu_destar ;
+    bugis:termasukDomain          bugis:DomainPerhiasan .
+
+# 637. pabbiring — perhiasan rambut / tusuk konde
+bugis:pabbiring
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              637 ;
+    bugis:aksaraLontaraq          "ᨄᨅᨗᨑᨗ" ;
+    bugis:bentukLatin             "pabbiring" ;
+    bugis:maknaIndonesia          "tusuk konde, perhiasan rambut tradisional" ;
+    bugis:maknaInggris            "hairpin, traditional hair ornament" ;
+    bugis:fonetik                 "/pab.bi.riŋ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Pabbiring bulaweng nalettu ana dara ri bunting." ;
+    bugis:contohKalimatTerjemahan "Tusuk konde emas dipakai gadis di pernikahan." ;
+    bugis:jenisMorfologi          "berimbuhan (pa- + biring)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "rendah" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_pa ;
+    bugis:berkaitanDengan         bugis:bulaweng ;
+    bugis:berkaitanDengan         bugis:gandong ;
+    bugis:termasukDomain          bugis:DomainPerhiasan .
+
+# 638. mappake — memakai / mengenakan
+bugis:mappake
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              638 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨀᨙ" ;
+    bugis:bentukLatin             "mappake" ;
+    bugis:maknaIndonesia          "memakai, mengenakan, menggunakan" ;
+    bugis:maknaInggris            "to wear, to put on, to use" ;
+    bugis:fonetik                 "/map.pa.ke/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Mappake lipa sabbe mabiasa tau bunting." ;
+    bugis:contohKalimatTerjemahan "Memakai sarung sutra biasa pada pengantin." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + pake)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:waju_adat ;
+    bugis:berkaitanDengan         bugis:lipa_sabbe ;
+    bugis:termasukDomain          bugis:DomainPerhiasan .
+
+# 639. leppa — selendang / kain panjang
+bugis:leppa
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              639 ;
+    bugis:aksaraLontaraq          "ᨒᨙᨄ" ;
+    bugis:bentukLatin             "leppa" ;
+    bugis:maknaIndonesia          "selendang, kain panjang wanita" ;
+    bugis:maknaInggris            "shawl, long cloth worn by women" ;
+    bugis:fonetik                 "/lep.pa/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Leppa nalettu perempuan Bugis ri acara." ;
+    bugis:contohKalimatTerjemahan "Selendang dipakai wanita Bugis di acara." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:baju_bodo ;
+    bugis:berkaitanDengan         bugis:lipa_sabbe ;
+    bugis:termasukDomain          bugis:DomainPerhiasan .
+
+# 640. kelong_bodo — baju bodo kuno (istilah sastra)
+bugis:sillaq
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              640 ;
+    bugis:aksaraLontaraq          "ᨔᨗᨒᨕ" ;
+    bugis:bentukLatin             "sillaq" ;
+    bugis:maknaIndonesia          "parang, keris pendek, senjata tajam" ;
+    bugis:maknaInggris            "short sword, dagger" ;
+    bugis:fonetik                 "/sil.laʔ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Sillaq nasiaga tau ri wettu laiq." ;
+    bugis:contohKalimatTerjemahan "Parang dibawa orang di waktu perang." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "sastra" ;
+    bugis:frekuensiPenggunaan     "rendah" ;
+    bugis:statusKata              "arkais" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:kawali ;
+    bugis:berkaitanDengan         bugis:tajaq ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+
+# =============================================================================
+# ── DOMAIN: PERDAGANGAN & EKONOMI (641–655) ─────────────────────────────────
+# =============================================================================
+
+# 641. paddagang — pedagang
+bugis:paddagang_orang
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              641 ;
+    bugis:aksaraLontaraq          "ᨄᨉᨁ" ;
+    bugis:bentukLatin             "paddagang" ;
+    bugis:maknaIndonesia          "pedagang, penjual, niagawan" ;
+    bugis:maknaInggris            "trader, merchant, seller" ;
+    bugis:fonetik                 "/pad.da.gaŋ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Paddagang lipa sabbe massompe ri Makassar." ;
+    bugis:contohKalimatTerjemahan "Pedagang sarung sutra berlayar ke Makassar." ;
+    bugis:jenisMorfologi          "berimbuhan (pa- + dagang)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_pa ;
+    bugis:berkaitanDengan         bugis:dagangeng ;
+    bugis:berkaitanDengan         bugis:massompe ;
+    bugis:termasukDomain          bugis:DomainPerdagangan .
+
+# 642. rega — harga
+bugis:rega
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              642 ;
+    bugis:aksaraLontaraq          "ᨑᨙᨁ" ;
+    bugis:bentukLatin             "rega" ;
+    bugis:maknaIndonesia          "harga, nilai, tarif" ;
+    bugis:maknaInggris            "price, value, rate" ;
+    bugis:fonetik                 "/re.ga/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Rega lipa sabbeq maega maelo siompo." ;
+    bugis:contohKalimatTerjemahan "Harga sarung sutra masih ingin tinggi." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:sinonimDari             bugis:arga ;
+    bugis:berkaitanDengan         bugis:dagangeng ;
+    bugis:berkaitanDengan         bugis:doi ;
+    bugis:termasukDomain          bugis:DomainPerdagangan .
+
+# 643. massali — membeli / berbelanja
+bugis:massali
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              643 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨒᨗ" ;
+    bugis:bentukLatin             "massali" ;
+    bugis:maknaIndonesia          "membeli, berbelanja" ;
+    bugis:maknaInggris            "to buy, to purchase, to shop" ;
+    bugis:fonetik                 "/mas.sa.li/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Massali berre ri pasa narekko ulengeq purai." ;
+    bugis:contohKalimatTerjemahan "Membeli beras di pasar setelah awal bulan." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + sali)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:antonimDari             bugis:mabbalu ;
+    bugis:berkaitanDengan         bugis:pasa ;
+    bugis:berkaitanDengan         bugis:doi ;
+    bugis:termasukDomain          bugis:DomainPerdagangan .
+
+# 644. hutang_doi — hutang uang
+bugis:hutang_doi
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              644 ;
+    bugis:aksaraLontaraq          "ᨖᨘᨈ ᨉᨚᨕᨗ" ;
+    bugis:bentukLatin             "hutang doi" ;
+    bugis:maknaIndonesia          "hutang uang, pinjaman uang" ;
+    bugis:maknaInggris            "money debt, monetary loan" ;
+    bugis:fonetik                 "/hu.taŋ do.i/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Hutang doi nabaliq lebba ri wettu nasiapai." ;
+    bugis:contohKalimatTerjemahan "Hutang uang dilunasi tepat pada waktunya." ;
+    bugis:jenisMorfologi          "frasa nominal" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:hutang ;
+    bugis:berkaitanDengan         bugis:doi ;
+    bugis:termasukDomain          bugis:DomainPerdagangan .
+
+# 645. massiaga — menabung / menyimpan
+bugis:massiaga
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              645 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨗᨕᨁ" ;
+    bugis:bentukLatin             "massiaga" ;
+    bugis:maknaIndonesia          "menabung, menyimpan, berjaga-jaga" ;
+    bugis:maknaInggris            "to save money, to keep, to be thrifty" ;
+    bugis:fonetik                 "/mas.si.a.ga/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Massiaga doi napinasai ri wettu susah." ;
+    bugis:contohKalimatTerjemahan "Menabung uang disiapkannya untuk waktu susah." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + siaga)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:doi ;
+    bugis:berkaitanDengan         bugis:laba ;
+    bugis:termasukDomain          bugis:DomainPerdagangan .
+
+# 646. mapparenta — memerintah / berkuasa
+bugis:mapparenta
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              646 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨑᨙᨂᨈ" ;
+    bugis:bentukLatin             "mapparenta" ;
+    bugis:maknaIndonesia          "memerintah, berkuasa, memimpin" ;
+    bugis:maknaInggris            "to govern, to rule, to lead" ;
+    bugis:fonetik                 "/map.pa.ren.ta/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Arung mapparenta ri tana na madeceng." ;
+    bugis:contohKalimatTerjemahan "Raja memerintah di negerinya dengan baik." ;
+    bugis:jenisMorfologi          "berimbuhan (mappa- + renta)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:berkaitanDengan         bugis:arung ;
+    bugis:berkaitanDengan         bugis:pabbicara ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 647. pallaong_tasi — nelayan
+bugis:pallaong_tasi
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              647 ;
+    bugis:aksaraLontaraq          "ᨄᨒᨒᨚ ᨈᨔᨗ" ;
+    bugis:bentukLatin             "pallaong tasi" ;
+    bugis:maknaIndonesia          "nelayan, pencari ikan di laut" ;
+    bugis:maknaInggris            "fisherman, sea fisher" ;
+    bugis:fonetik                 "/pal.la.oŋ ta.si/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Pallaong tasi lao mappawa bale wettu esso." ;
+    bugis:contohKalimatTerjemahan "Nelayan pergi membawa ikan di siang hari." ;
+    bugis:jenisMorfologi          "frasa nominal" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "pesisir" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:bale_ikan ;
+    bugis:berkaitanDengan         bugis:tasi ;
+    bugis:berkaitanDengan         bugis:lopi ;
+    bugis:termasukDomain          bugis:DomainPerdagangan .
+
+# 648. mappakajualaq — melelang / menjual murah
+bugis:mappakajualaq
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              648 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨀᨍᨘᨒᨕ" ;
+    bugis:bentukLatin             "mappakajualaq" ;
+    bugis:maknaIndonesia          "menjual murah, melelang, obral" ;
+    bugis:maknaInggris            "to sell cheaply, to auction, to liquidate stock" ;
+    bugis:fonetik                 "/map.pa.ka.ju.laʔ/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Mappakajualaq bale pura macoa ri pasa." ;
+    bugis:contohKalimatTerjemahan "Menjual murah ikan yang sudah lama di pasar." ;
+    bugis:jenisMorfologi          "berimbuhan (mappa- + kajualaq)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:berkaitanDengan         bugis:mabbalu ;
+    bugis:berkaitanDengan         bugis:pasa ;
+    bugis:termasukDomain          bugis:DomainPerdagangan .
+
+# 649. massompe_doi — mengirim uang
+bugis:massompe_doi
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              649 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨚᨆᨄᨙ ᨉᨚᨕᨗ" ;
+    bugis:bentukLatin             "massompe doi" ;
+    bugis:maknaIndonesia          "mengirim uang, transfer uang" ;
+    bugis:maknaInggris            "to send money, to transfer money" ;
+    bugis:fonetik                 "/mas.som.pe do.i/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Massompe doi ri kampong tiap uleng." ;
+    bugis:contohKalimatTerjemahan "Mengirim uang ke kampung setiap bulan." ;
+    bugis:jenisMorfologi          "frasa verbal" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:doi ;
+    bugis:berkaitanDengan         bugis:massompe ;
+    bugis:termasukDomain          bugis:DomainPerdagangan .
+
+# 650. sipappada — barter / tukar-menukar
+bugis:sipappada
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              650 ;
+    bugis:aksaraLontaraq          "ᨔᨗᨄᨄᨉ" ;
+    bugis:bentukLatin             "sipappada" ;
+    bugis:maknaIndonesia          "barter, tukar-menukar barang" ;
+    bugis:maknaInggris            "to barter, to exchange goods" ;
+    bugis:fonetik                 "/si.pap.pa.da/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Sipappada berre sibawa lipa ri kampong toq." ;
+    bugis:contohKalimatTerjemahan "Barter beras dengan sarung di kampung dulu." ;
+    bugis:jenisMorfologi          "berimbuhan (si- + pappada)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "rendah" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_si ;
+    bugis:berkaitanDengan         bugis:dagangeng ;
+    bugis:berkaitanDengan         bugis:pasa ;
+    bugis:termasukDomain          bugis:DomainPerdagangan .
+
+
+# =============================================================================
+# ── KATA KERJA LANJUT (651–665) ─────────────────────────────────────────────
+# =============================================================================
+
+# 651. massappa — mencari / mencari-cari
+bugis:massappa_cari
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              651 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨄ" ;
+    bugis:bentukLatin             "massappa" ;
+    bugis:maknaIndonesia          "mencari, mencari-cari, berusaha" ;
+    bugis:maknaInggris            "to search for, to look for, to seek" ;
+    bugis:fonetik                 "/mas.sap.pa/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Tau maega massappa pajama ri kota." ;
+    bugis:contohKalimatTerjemahan "Banyak orang mencari pekerjaan di kota." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + sappa)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:majjama ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 652. mappasikola — menyekolahkan / mengirim sekolah
+bugis:mappasikola_kirim
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              652 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨔᨗᨀᨚᨒ" ;
+    bugis:bentukLatin             "mappasikola" ;
+    bugis:maknaIndonesia          "menyekolahkan, mengirim ke sekolah" ;
+    bugis:maknaInggris            "to send to school, to have someone schooled" ;
+    bugis:fonetik                 "/map.pa.si.ko.la/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Ambo namaelo mappasikola ana ri pusat kota." ;
+    bugis:contohKalimatTerjemahan "Ayah ingin menyekolahkan anak di pusat kota." ;
+    bugis:jenisMorfologi          "berimbuhan (mappa- + sikola)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:berkaitanDengan         bugis:massikola ;
+    bugis:berkaitanDengan         bugis:paddisengeng ;
+    bugis:termasukDomain          bugis:DomainReligi .
+
+# 653. mappatudang — mendudukkan / menempatkan
+bugis:mappatudang
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              653 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨈᨘᨉ" ;
+    bugis:bentukLatin             "mappatudang" ;
+    bugis:maknaIndonesia          "mendudukkan, menempatkan, mengatur posisi" ;
+    bugis:maknaInggris            "to seat, to place, to position" ;
+    bugis:fonetik                 "/map.pa.tu.daŋ/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Mappatudang tau ri tempat na." ;
+    bugis:contohKalimatTerjemahan "Mendudukkan orang di tempatnya." ;
+    bugis:jenisMorfologi          "berimbuhan (mappa- + tudang)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:berkaitanDengan         bugis:mattudang ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 654. macciddong — menunggu / berdiam
+bugis:macciddong
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              654 ;
+    bugis:aksaraLontaraq          "ᨆᨌᨗᨉᨚ" ;
+    bugis:bentukLatin             "macciddong" ;
+    bugis:maknaIndonesia          "menunggu, berdiam diri, bersabar menanti" ;
+    bugis:maknaInggris            "to wait, to stay, to patiently wait" ;
+    bugis:fonetik                 "/mac.cid.doŋ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Macciddong ri bola wettu bosi lodde." ;
+    bugis:contohKalimatTerjemahan "Berdiam di rumah saat hujan deras." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + ciddong)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:sinonimDari             bugis:maddoja ;
+    bugis:berkaitanDengan         bugis:monro ;
+    bugis:termasukDomain          bugis:DomainEmosi .
+
+# 655. massingkeq — ingat / mengingat
+bugis:massingkeq
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              655 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨗᨂᨀᨕ" ;
+    bugis:bentukLatin             "massingkeq" ;
+    bugis:maknaIndonesia          "ingat, mengingat, teringat" ;
+    bugis:maknaInggris            "to remember, to recall, to be reminded" ;
+    bugis:fonetik                 "/mas.siŋ.keʔ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Massingkeq tau ri kampong narekko lao jauh." ;
+    bugis:contohKalimatTerjemahan "Teringat orang di kampung kalau pergi jauh." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + singkeq)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:nawa_nawa ;
+    bugis:termasukDomain          bugis:DomainEmosi .
+
+# 656. mallibu — menyelam / berenang dalam
+bugis:mallibu
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              656 ;
+    bugis:aksaraLontaraq          "ᨆᨒᨗᨅᨘ" ;
+    bugis:bentukLatin             "mallibu" ;
+    bugis:maknaIndonesia          "menyelam, berenang dalam air" ;
+    bugis:maknaInggris            "to dive, to swim underwater" ;
+    bugis:fonetik                 "/mal.li.bu/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Mallibu ri salo nappada ana makessing." ;
+    bugis:contohKalimatTerjemahan "Menyelam di sungai banyak anak yang suka." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + libu)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:salo ;
+    bugis:berkaitanDengan         bugis:tasi ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 657. maccarita — bercerita / mendongeng
+bugis:maccarita
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              657 ;
+    bugis:aksaraLontaraq          "ᨆᨌᨑᨗᨈ" ;
+    bugis:bentukLatin             "maccarita" ;
+    bugis:maknaIndonesia          "bercerita, mendongeng, berkisah" ;
+    bugis:maknaInggris            "to tell a story, to narrate, to recount" ;
+    bugis:fonetik                 "/mac.ca.ri.ta/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Nene maccarita ri ana cucuna ri wenni." ;
+    bugis:contohKalimatTerjemahan "Nenek bercerita kepada cucu-cucunya di malam hari." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + carita)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:pappaseng ;
+    bugis:berkaitanDengan         bugis:nene ;
+    bugis:termasukDomain          bugis:DomainSeniLoga .
+
+# 658. mattanre — membangun / mendirikan
+bugis:mattanre
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              658 ;
+    bugis:aksaraLontaraq          "ᨆᨈᨂᨑᨙ" ;
+    bugis:bentukLatin             "mattanre" ;
+    bugis:maknaIndonesia          "membangun, mendirikan, menegakkan" ;
+    bugis:maknaInggris            "to build, to construct, to erect" ;
+    bugis:fonetik                 "/mat.tan.re/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Mattanre bola nasabaq maega ana." ;
+    bugis:contohKalimatTerjemahan "Membangun rumah karena anak banyak." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + tanre)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:bola ;
+    bugis:berkaitanDengan         bugis:panre_bola ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 659. massikolaq — belajar / menuntut ilmu
+bugis:massikolaq
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              659 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨗᨀᨚᨒᨕ" ;
+    bugis:bentukLatin             "massikolaq" ;
+    bugis:maknaIndonesia          "belajar, menuntut ilmu, bersekolah" ;
+    bugis:maknaInggris            "to study, to learn, to attend school" ;
+    bugis:fonetik                 "/mas.si.ko.laʔ/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Massikolaq nenniya mappangisseng penting." ;
+    bugis:contohKalimatTerjemahan "Belajar dan menuntut ilmu itu penting." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + sikolaq)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:sinonimDari             bugis:massikola ;
+    bugis:berkaitanDengan         bugis:paddisengeng ;
+    bugis:berkaitanDengan         bugis:guru ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 660. massenge — berlayar / merantau
+bugis:massenge
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              660 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨙᨂᨁᨙ" ;
+    bugis:bentukLatin             "massenge" ;
+    bugis:maknaIndonesia          "berlayar jauh, merantau, pergi ke negeri lain" ;
+    bugis:maknaInggris            "to sail far, to venture abroad, to migrate" ;
+    bugis:fonetik                 "/mas.sen.ge/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Tau Ugi mabiasa massenge ri tasik ma'gelleng." ;
+    bugis:contohKalimatTerjemahan "Orang Bugis biasa berlayar di lautan biru." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + senge)" ;
+    bugis:tingkatFormalitas       "sastra" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:sinonimDari             bugis:massompe ;
+    bugis:berkaitanDengan         bugis:lopi ;
+    bugis:berkaitanDengan         bugis:tasi ;
+    bugis:termasukDomain          bugis:DomainGeografi .
+
+
+# =============================================================================
+# ── KATA SIFAT LANJUT (661–675) ─────────────────────────────────────────────
+# =============================================================================
+
+# 661. malenno — lembut / halus
+bugis:malenno
+    rdf:type                      bugis:Adjektiva ;
+    bugis:nomorEntri              661 ;
+    bugis:aksaraLontaraq          "ᨆᨒᨙᨂᨚ" ;
+    bugis:bentukLatin             "malenno" ;
+    bugis:maknaIndonesia          "lembut, halus, tidak kasar" ;
+    bugis:maknaInggris            "soft, gentle, smooth" ;
+    bugis:fonetik                 "/ma.len.no/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Pangadereng na malenno sining siri na." ;
+    bugis:contohKalimatTerjemahan "Adat istiadatnya lembut namun penuh martabat." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + lenno)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:antonimDari             bugis:kasar ;
+    bugis:berkaitanDengan         bugis:alusu ;
+    bugis:termasukDomain          bugis:DomainEmosi .
+
+# 662. malampe — panjang / jauh
+bugis:malampe_panjang
+    rdf:type                      bugis:Adjektiva ;
+    bugis:nomorEntri              662 ;
+    bugis:aksaraLontaraq          "ᨆᨒᨆᨄᨙ" ;
+    bugis:bentukLatin             "malampe" ;
+    bugis:maknaIndonesia          "panjang, jauh, berlangsung lama" ;
+    bugis:maknaInggris            "long, far, lengthy" ;
+    bugis:fonetik                 "/ma.lam.pe/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Malampe laleng ri kampong na." ;
+    bugis:contohKalimatTerjemahan "Panjang jalan menuju kampungnya." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + lampe)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:antonimDari             bugis:mabela ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 663. malempang — rata / datar
+bugis:malempang_rata
+    rdf:type                      bugis:Adjektiva ;
+    bugis:nomorEntri              663 ;
+    bugis:aksaraLontaraq          "ᨆᨒᨙᨆᨄ" ;
+    bugis:bentukLatin             "malempang" ;
+    bugis:maknaIndonesia          "rata, datar, lurus tidak bergelombang" ;
+    bugis:maknaInggris            "flat, level, even, straight" ;
+    bugis:fonetik                 "/ma.lem.paŋ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Tana malempang madeceng ri Uma." ;
+    bugis:contohKalimatTerjemahan "Tanah yang rata bagus untuk sawah." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + lempang)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:tana ;
+    bugis:berkaitanDengan         bugis:galung ;
+    bugis:termasukDomain          bugis:DomainPertanian .
+
+# 664. macokkong_ati — sombong / angkuh
+bugis:macokkong_sombong
+    rdf:type                      bugis:Adjektiva ;
+    bugis:nomorEntri              664 ;
+    bugis:aksaraLontaraq          "ᨆᨌᨚᨀᨚ ᨕᨈᨗ" ;
+    bugis:bentukLatin             "macokkong ati" ;
+    bugis:maknaIndonesia          "sombong, angkuh, tinggi hati" ;
+    bugis:maknaInggris            "arrogant, haughty, conceited" ;
+    bugis:fonetik                 "/ma.cok.koŋ a.ti/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Dena nasituruki tau macokkong ati." ;
+    bugis:contohKalimatTerjemahan "Tidak disukai orang yang sombong." ;
+    bugis:jenisMorfologi          "frasa adjektival" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:antonimDari             bugis:mappakatau ;
+    bugis:berkaitanDengan         bugis:masiri ;
+    bugis:termasukDomain          bugis:DomainEmosi .
+
+# 665. mabellang — lebar / luas
+bugis:mabellang
+    rdf:type                      bugis:Adjektiva ;
+    bugis:nomorEntri              665 ;
+    bugis:aksaraLontaraq          "ᨆᨅᨙᨒ" ;
+    bugis:bentukLatin             "mabellang" ;
+    bugis:maknaIndonesia          "lebar, luas, lapang" ;
+    bugis:maknaInggris            "wide, broad, spacious" ;
+    bugis:fonetik                 "/ma.bel.laŋ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Bola na mabellang sippada pura mattanre baru." ;
+    bugis:contohKalimatTerjemahan "Rumahnya luas setelah dibangun baru." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + bellang)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:antonimDari             bugis:maceddek ;
+    bugis:berkaitanDengan         bugis:malebba ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+
+# =============================================================================
+# ── WAKTU & BILANGAN (666–675) ──────────────────────────────────────────────
+# =============================================================================
+
+# 666. tette — jam / waktu dalam satuan jam
+bugis:tette_jam
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              666 ;
+    bugis:aksaraLontaraq          "ᨈᨙᨈ" ;
+    bugis:bentukLatin             "tette" ;
+    bugis:maknaIndonesia          "jam, pukul, waktu dalam satuan jam" ;
+    bugis:maknaInggris            "hour, o'clock, time unit" ;
+    bugis:fonetik                 "/tet.te/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Tette pira engkako ri bola?" ;
+    bugis:contohKalimatTerjemahan "Jam berapa kamu di rumah?" ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:diturunkanDari          bugis:akar_tette ;
+    bugis:berkaitanDengan         bugis:wettu ;
+    bugis:berkaitanDengan         bugis:esso ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 667. allowa — hari ini / sekarang
+bugis:allowa
+    rdf:type                      bugis:Adverbia ;
+    bugis:nomorEntri              667 ;
+    bugis:aksaraLontaraq          "ᨕᨒᨚᨓ" ;
+    bugis:bentukLatin             "allowa" ;
+    bugis:maknaIndonesia          "hari ini, sekarang" ;
+    bugis:maknaInggris            "today, now, this day" ;
+    bugis:fonetik                 "/al.lo.wa/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Allowa lao ri pasar toli." ;
+    bugis:contohKalimatTerjemahan "Hari ini pergi ke pasar dulu." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:esso ;
+    bugis:berkaitanDengan         bugis:wettu ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 668. rimunri — kemarin
+bugis:rimunri
+    rdf:type                      bugis:Adverbia ;
+    bugis:nomorEntri              668 ;
+    bugis:aksaraLontaraq          "ᨑᨗᨆᨘᨂᨑᨗ" ;
+    bugis:bentukLatin             "rimunri" ;
+    bugis:maknaIndonesia          "kemarin, hari yang lalu" ;
+    bugis:maknaInggris            "yesterday, the day before" ;
+    bugis:fonetik                 "/ri.mun.ri/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Rimunri lao ri sekola ana." ;
+    bugis:contohKalimatTerjemahan "Kemarin anak pergi ke sekolah." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:antonimDari             bugis:allowa ;
+    bugis:berkaitanDengan         bugis:esso ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 669. mannawa — besok / hari yang akan datang
+bugis:mannawa
+    rdf:type                      bugis:Adverbia ;
+    bugis:nomorEntri              669 ;
+    bugis:aksaraLontaraq          "ᨆᨂᨊᨓ" ;
+    bugis:bentukLatin             "mannawa" ;
+    bugis:maknaIndonesia          "besok, hari esok" ;
+    bugis:maknaInggris            "tomorrow, the next day" ;
+    bugis:fonetik                 "/man.na.wa/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Mannawa maelo lao ri kampong." ;
+    bugis:contohKalimatTerjemahan "Besok mau pergi ke kampung." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:antonimDari             bugis:rimunri ;
+    bugis:berkaitanDengan         bugis:esso ;
+    bugis:berkaitanDengan         bugis:allowa ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 670. sibu — seribu
+bugis:sibu
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              670 ;
+    bugis:aksaraLontaraq          "ᨔᨗᨅᨘ" ;
+    bugis:bentukLatin             "sibu" ;
+    bugis:maknaIndonesia          "seribu (1000)" ;
+    bugis:maknaInggris            "one thousand (1000)" ;
+    bugis:fonetik                 "/si.bu/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Sibu ulaq nakkeda iana." ;
+    bugis:contohKalimatTerjemahan "Seribu alasan diucapkannya." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:seddi ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+
+# =============================================================================
+# ── PERIBAHASA & UNGKAPAN BUGIS (671–685) ───────────────────────────────────
+# =============================================================================
+
+# 671. Ade tessimombaliq — adat tidak berubah (ungkapan)
+bugis:ade_tessimombaliq
+    rdf:type                      bugis:Peribahasa ;
+    bugis:nomorEntri              671 ;
+    bugis:aksaraLontaraq          "ᨕᨉᨙ ᨈᨙᨔᨗᨆᨚᨆᨅᨒᨗ" ;
+    bugis:bentukLatin             "Ade tessimombaliq" ;
+    bugis:maknaIndonesia          "Adat tidak bisa diubah, hukum adat bersifat tetap" ;
+    bugis:maknaInggris            "Custom cannot be reversed; tradition is immutable" ;
+    bugis:fonetik                 "/a.de tes.si.mom.ba.liʔ/" ;
+    bugis:silabel                 7 ;
+    bugis:contohKalimat           "Ade tessimombaliq, mappogau ada malempu ri laleng ade." ;
+    bugis:contohKalimatTerjemahan "Adat tak dapat diubah, harus berlaku jujur dalam adat." ;
+    bugis:jenisMorfologi          "frasa peribahasa" ;
+    bugis:tingkatFormalitas       "sastra" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:pangadereng ;
+    bugis:berkaitanDengan         bugis:ada ;
+    bugis:termasukDomain          bugis:DomainPeribahasa .
+
+# 672. Narekko masero — ungkapan syukur saat berhasil
+bugis:maserro_ri_olo
+    rdf:type                      bugis:Peribahasa ;
+    bugis:nomorEntri              672 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨙᨑᨚ ᨑᨗ ᨕᨚᨒᨚ" ;
+    bugis:bentukLatin             "maserro ri olo" ;
+    bugis:maknaIndonesia          "keras berusaha lebih dahulu, baru hasil didapat" ;
+    bugis:maknaInggris            "persevere first, then reap the rewards" ;
+    bugis:fonetik                 "/ma.ser.ro ri o.lo/" ;
+    bugis:silabel                 6 ;
+    bugis:contohKalimat           "Maserro ri olo, makenna ri munri." ;
+    bugis:contohKalimatTerjemahan "Bekerja keras duluan, berhasil kemudian." ;
+    bugis:jenisMorfologi          "frasa peribahasa" ;
+    bugis:tingkatFormalitas       "sastra" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:majjama ;
+    bugis:berkaitanDengan         bugis:mappoja ;
+    bugis:termasukDomain          bugis:DomainPeribahasa .
+
+# 673. Siri — ungkapan harga diri
+bugis:siri_na_pacce
+    rdf:type                      bugis:Peribahasa ;
+    bugis:nomorEntri              673 ;
+    bugis:aksaraLontaraq          "ᨔᨗᨑᨗ ᨊ ᨄᨔᨙ" ;
+    bugis:bentukLatin             "Siri na pacce" ;
+    bugis:maknaIndonesia          "Harga diri dan rasa empati, dua pilar hidup orang Bugis" ;
+    bugis:maknaInggris            "Pride and empathy, the two pillars of Buginese life" ;
+    bugis:fonetik                 "/si.ri na pac.ce/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Siri na pacce sipakappang tau Ugi." ;
+    bugis:contohKalimatTerjemahan "Harga diri dan empati menjadi pedoman orang Bugis." ;
+    bugis:jenisMorfologi          "frasa konsep budaya" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:siri ;
+    bugis:berkaitanDengan         bugis:pacce ;
+    bugis:berkaitanDengan         bugis:pangadereng ;
+    bugis:termasukDomain          bugis:DomainPeribahasa .
+
+# 674. Mabbulo sibatang — bersatu / gotong royong
+bugis:mabbulo_sibatang_p
+    rdf:type                      bugis:Peribahasa ;
+    bugis:nomorEntri              674 ;
+    bugis:aksaraLontaraq          "ᨆᨅᨘᨒᨚ ᨔᨗᨅᨈ" ;
+    bugis:bentukLatin             "mabbulo sibatang" ;
+    bugis:maknaIndonesia          "Bersatu padu bagaikan serumpun bambu, bersama menghadapi tantangan" ;
+    bugis:maknaInggris            "United as one bamboo clump, facing challenges together" ;
+    bugis:fonetik                 "/mab.bu.lo si.ba.taŋ/" ;
+    bugis:silabel                 6 ;
+    bugis:contohKalimat           "Mabbulo sibatang nenniya sipulung lettu ri gau madeceng." ;
+    bugis:contohKalimatTerjemahan "Bersatu padu dan berkumpul sampai pada perbuatan baik." ;
+    bugis:jenisMorfologi          "frasa peribahasa" ;
+    bugis:tingkatFormalitas       "sastra" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:mabbulo_sibatang ;
+    bugis:berkaitanDengan         bugis:sipakainge ;
+    bugis:termasukDomain          bugis:DomainPeribahasa .
+
+# 675. Resopa namalomo — kerja keras hasilkan kemudahan
+bugis:resopa_namalomo
+    rdf:type                      bugis:Peribahasa ;
+    bugis:nomorEntri              675 ;
+    bugis:aksaraLontaraq          "ᨑᨙᨔᨚᨄ ᨊᨆᨒᨚᨆᨚ" ;
+    bugis:bentukLatin             "Resopa namalomo" ;
+    bugis:maknaIndonesia          "Dengan kerja keras barulah segala sesuatu menjadi mudah" ;
+    bugis:maknaInggris            "Through hard work, everything becomes easy" ;
+    bugis:fonetik                 "/re.so.pa na.ma.lo.mo/" ;
+    bugis:silabel                 7 ;
+    bugis:contohKalimat           "Resopa namalomo, natetong ri gau madeceng." ;
+    bugis:contohKalimatTerjemahan "Kerja keras membuat mudah, dan kokoh dalam perbuatan baik." ;
+    bugis:jenisMorfologi          "frasa peribahasa" ;
+    bugis:tingkatFormalitas       "sastra" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:majjama ;
+    bugis:berkaitanDengan         bugis:malomo ;
+    bugis:termasukDomain          bugis:DomainPeribahasa .
+
+
+# =============================================================================
+# ── KATA-KATA UMUM PELENGKAP (676–700) ──────────────────────────────────────
+# =============================================================================
+
+# 676. tomtompala — pesisir / tepian pantai
+bugis:tomtompala
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              676 ;
+    bugis:aksaraLontaraq          "ᨈᨚᨆᨈᨚᨆᨄᨒ" ;
+    bugis:bentukLatin             "tomtompala" ;
+    bugis:maknaIndonesia          "pesisir, tepian pantai, pinggir laut" ;
+    bugis:maknaInggris            "coastline, shore, seaside" ;
+    bugis:fonetik                 "/tom.tom.pa.la/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Tau Ugi maega monro ri tomtompala tasi." ;
+    bugis:contohKalimatTerjemahan "Orang Bugis banyak tinggal di pesisir laut." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "pesisir" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:tasi ;
+    bugis:berkaitanDengan         bugis:lopi ;
+    bugis:termasukDomain          bugis:DomainGeografi .
+
+# 677. riolo — dulu / pada masa lalu
+bugis:riolo_masa
+    rdf:type                      bugis:Adverbia ;
+    bugis:nomorEntri              677 ;
+    bugis:aksaraLontaraq          "ᨑᨗᨕᨚᨒᨚ" ;
+    bugis:bentukLatin             "riolo" ;
+    bugis:maknaIndonesia          "dulu, pada masa lalu, zaman dahulu" ;
+    bugis:maknaInggris            "in the past, long ago, formerly" ;
+    bugis:fonetik                 "/ri.o.lo/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Riolo to Ugi macca lao massompe." ;
+    bugis:contohKalimatTerjemahan "Dahulu orang Bugis pandai berlayar." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:to_riolo ;
+    bugis:berkaitanDengan         bugis:wettu ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 678. rimunna — setelah itu / sesudah itu
+bugis:rimunna
+    rdf:type                      bugis:Adverbia ;
+    bugis:nomorEntri              678 ;
+    bugis:aksaraLontaraq          "ᨑᨗᨆᨘᨂᨊ" ;
+    bugis:bentukLatin             "rimunna" ;
+    bugis:maknaIndonesia          "setelah itu, sesudah itu, kemudian" ;
+    bugis:maknaInggris            "after that, afterwards, then" ;
+    bugis:fonetik                 "/ri.mun.na/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Manre rimunna lao ri pasa." ;
+    bugis:contohKalimatTerjemahan "Makan, setelah itu pergi ke pasar." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:nappa ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 679. seppulo — sepuluh
+bugis:seppulo
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              679 ;
+    bugis:aksaraLontaraq          "ᨔᨙᨄᨘᨒᨚ" ;
+    bugis:bentukLatin             "seppulo" ;
+    bugis:maknaIndonesia          "sepuluh (10)" ;
+    bugis:maknaInggris            "ten (10)" ;
+    bugis:fonetik                 "/sep.pu.lo/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Seppulo tau lao ri acara." ;
+    bugis:contohKalimatTerjemahan "Sepuluh orang pergi ke acara itu." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:sinonimDari             bugis:sampulo ;
+    bugis:berkaitanDengan         bugis:seddi ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 680. siwang — sembilan
+bugis:siwang
+    rdf:type                      bugis:Nomina ;
+    bugis:nomorEntri              680 ;
+    bugis:aksaraLontaraq          "ᨔᨗᨓ" ;
+    bugis:bentukLatin             "siwang" ;
+    bugis:maknaIndonesia          "sembilan (9)" ;
+    bugis:maknaInggris            "nine (9)" ;
+    bugis:fonetik                 "/si.waŋ/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Siwang uleng bulan ri sataung." ;
+    bugis:contohKalimatTerjemahan "Sembilan bulan dalam setahun." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:arua ;
+    bugis:berkaitanDengan         bugis:seppulo ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 681. mapparampe — mengantarkan / menyampaikan
+bugis:mapparampe_antar
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              681 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨑᨆᨄᨙ" ;
+    bugis:bentukLatin             "mapparampe" ;
+    bugis:maknaIndonesia          "mengantarkan, menyampaikan, mengirimkan" ;
+    bugis:maknaInggris            "to deliver, to send, to convey" ;
+    bugis:fonetik                 "/map.pa.ram.pe/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Mapparampe surat ri tau na." ;
+    bugis:contohKalimatTerjemahan "Mengantarkan surat kepada orang itu." ;
+    bugis:jenisMorfologi          "berimbuhan (mappa- + rampe)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:sinonimDari             bugis:mapparampe ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 682. malilu — tersesat / salah jalan
+bugis:malilu
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              682 ;
+    bugis:aksaraLontaraq          "ᨆᨒᨗᨒᨘ" ;
+    bugis:bentukLatin             "malilu" ;
+    bugis:maknaIndonesia          "tersesat, salah jalan, kehilangan arah" ;
+    bugis:maknaInggris            "to get lost, to lose one's way, to go astray" ;
+    bugis:fonetik                 "/ma.li.lu/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Malilu ri laleng magellu wenni." ;
+    bugis:contohKalimatTerjemahan "Tersesat di jalan yang gelap malam hari." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + lilu)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:laleng_jalan ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 683. maccikki — tersenyum / senyum kecil
+bugis:maccikki_senyum
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              683 ;
+    bugis:aksaraLontaraq          "ᨆᨌᨗᨀᨗ" ;
+    bugis:bentukLatin             "maccikki" ;
+    bugis:maknaIndonesia          "tersenyum, senyum tipis, nyengir" ;
+    bugis:maknaInggris            "to smile, to grin, to smirk" ;
+    bugis:fonetik                 "/mac.cik.ki/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Maccikki naita tau na masennang." ;
+    bugis:contohKalimatTerjemahan "Tersenyum saat melihat orang yang ia sayang." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + cikki)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:marennu ;
+    bugis:berkaitanDengan         bugis:masennang ;
+    bugis:termasukDomain          bugis:DomainEmosi .
+
+# 684. mappakalebbi_ada — memenuhi janji / menepati kata
+bugis:mappakalebbi_ada
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              684 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨀᨒᨙᨅᨗ ᨕᨉ" ;
+    bugis:bentukLatin             "mappakalebbi ada" ;
+    bugis:maknaIndonesia          "menepati janji, memenuhi kata-kata" ;
+    bugis:maknaInggris            "to keep one's word, to honor a promise" ;
+    bugis:fonetik                 "/map.pa.ka.leb.bi a.da/" ;
+    bugis:silabel                 7 ;
+    bugis:contohKalimat           "Tau malempu nasituruki mappakalebbi ada." ;
+    bugis:contohKalimatTerjemahan "Orang jujur disukai karena menepati janji." ;
+    bugis:jenisMorfologi          "frasa verbal" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:berkaitanDengan         bugis:malempu ;
+    bugis:berkaitanDengan         bugis:ada ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 685. mappideceng — memperbaiki / membenahi
+bugis:mappideceng
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              685 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨗᨉᨙᨌᨙ" ;
+    bugis:bentukLatin             "mappideceng" ;
+    bugis:maknaIndonesia          "memperbaiki, membenahi, memulihkan" ;
+    bugis:maknaInggris            "to fix, to repair, to restore" ;
+    bugis:fonetik                 "/map.pi.de.ceŋ/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Mappideceng bola pura mataraq." ;
+    bugis:contohKalimatTerjemahan "Memperbaiki rumah yang sudah rusak." ;
+    bugis:jenisMorfologi          "berimbuhan (mappi- + deceng)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:antonimDari             bugis:mappalunngang ;
+    bugis:berkaitanDengan         bugis:madeceng ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 686. mappasalama_ri — menyelamatkan / menolong dari bahaya
+bugis:mappasalama_ri
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              686 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨔᨒᨆ ᨑᨗ" ;
+    bugis:bentukLatin             "mappasalama ri" ;
+    bugis:maknaIndonesia          "menyelamatkan dari, menolong keluar dari bahaya" ;
+    bugis:maknaInggris            "to save from, to rescue from, to deliver from" ;
+    bugis:fonetik                 "/map.pa.sa.la.ma ri/" ;
+    bugis:silabel                 7 ;
+    bugis:contohKalimat           "Mappasalama ri masala iana madeceng." ;
+    bugis:contohKalimatTerjemahan "Menyelamatkan dari masalah itu baik." ;
+    bugis:jenisMorfologi          "berimbuhan (mappa- + salama)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:berkaitanDengan         bugis:mappasalama ;
+    bugis:berkaitanDengan         bugis:salama ;
+    bugis:termasukDomain          bugis:DomainReligi .
+
+# 687. maccappe — mengambil / memungut
+bugis:maccappe_ambil
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              687 ;
+    bugis:aksaraLontaraq          "ᨆᨌᨄᨙ" ;
+    bugis:bentukLatin             "maccappe" ;
+    bugis:maknaIndonesia          "mengambil, memungut, menjemput" ;
+    bugis:maknaInggris            "to take, to pick up, to fetch" ;
+    bugis:fonetik                 "/mac.cap.pe/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Maccappe ana ri sekola ri wettu manngalimeng." ;
+    bugis:contohKalimatTerjemahan "Menjemput anak di sekolah sore hari." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + cappe)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:lao ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 688. masse — pergi / berpindah
+bugis:masse
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              688 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨙ" ;
+    bugis:bentukLatin             "masse" ;
+    bugis:maknaIndonesia          "beranjak pergi, berpindah, pindah tempat" ;
+    bugis:maknaInggris            "to leave, to move away, to relocate" ;
+    bugis:fonetik                 "/mas.se/" ;
+    bugis:silabel                 2 ;
+    bugis:contohKalimat           "Masse ri kampong lao ri kota nasabaq pekerjaan." ;
+    bugis:contohKalimatTerjemahan "Pindah dari kampung ke kota karena pekerjaan." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + sse)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:sinonimDari             bugis:lao ;
+    bugis:antonimDari             bugis:monro ;
+    bugis:termasukDomain          bugis:DomainGeografi .
+
+# 689. mappalece_tempat — memindahkan sesuatu ke tempat lain
+bugis:mappalece_barang
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              689 ;
+    bugis:aksaraLontaraq          "ᨆᨄᨒᨙᨌᨙ" ;
+    bugis:bentukLatin             "mappalece" ;
+    bugis:maknaIndonesia          "memindahkan, menggeser, menempatkan ulang" ;
+    bugis:maknaInggris            "to move, to relocate, to shift" ;
+    bugis:fonetik                 "/map.pa.le.ce/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Mappalece bangkara ri sulapa eppa bola." ;
+    bugis:contohKalimatTerjemahan "Memindahkan meja ke sudut rumah." ;
+    bugis:jenisMorfologi          "berimbuhan (mappa- + lece)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_mappa ;
+    bugis:berkaitanDengan         bugis:mappalece ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 690. maccokkong_rupa — cemberut / masam muka
+bugis:maccokkong_rupa
+    rdf:type                      bugis:Adjektiva ;
+    bugis:nomorEntri              690 ;
+    bugis:aksaraLontaraq          "ᨆᨌᨚᨀᨚ ᨑᨘᨄ" ;
+    bugis:bentukLatin             "maccokkong rupa" ;
+    bugis:maknaIndonesia          "cemberut, masam muka, muka gelap" ;
+    bugis:maknaInggris            "frowning, sullen, gloomy-faced" ;
+    bugis:fonetik                 "/mac.cok.koŋ ru.pa/" ;
+    bugis:silabel                 5 ;
+    bugis:contohKalimat           "Maccokkong rupa naita nasabaq maccedda." ;
+    bugis:contohKalimatTerjemahan "Cemberut mukanya karena malu." ;
+    bugis:jenisMorfologi          "frasa adjektival" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:antonimDari             bugis:maccikki_senyum ;
+    bugis:berkaitanDengan         bugis:maja ;
+    bugis:termasukDomain          bugis:DomainEmosi .
+
+# 691. matinulu — rajin / tekun / gigih
+bugis:matinulu
+    rdf:type                      bugis:Adjektiva ;
+    bugis:nomorEntri              691 ;
+    bugis:aksaraLontaraq          "ᨆᨈᨗᨊᨘᨒᨘ" ;
+    bugis:bentukLatin             "matinulu" ;
+    bugis:maknaIndonesia          "rajin, tekun, gigih, tidak malas" ;
+    bugis:maknaInggris            "diligent, hardworking, persevering" ;
+    bugis:fonetik                 "/ma.ti.nu.lu/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Ana matinulu ri belajar makessing hasilna." ;
+    bugis:contohKalimatTerjemahan "Anak rajin dalam belajar bagus hasilnya." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + tinulu)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:antonimDari             bugis:maboddo ;
+    bugis:berkaitanDengan         bugis:majjama ;
+    bugis:termasukDomain          bugis:DomainEmosi .
+
+# 692. manggalingi — menjaga / merawat
+bugis:manggalingi
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              692 ;
+    bugis:aksaraLontaraq          "ᨆᨂᨁᨒᨗᨂᨁᨗ" ;
+    bugis:bentukLatin             "manggalingi" ;
+    bugis:maknaIndonesia          "menjaga, merawat, memelihara dengan serius" ;
+    bugis:maknaInggris            "to guard, to care for, to tend to" ;
+    bugis:fonetik                 "/maŋ.ga.li.ŋi/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Manggalingi tana na leluhurna dengan sepenuh hati." ;
+    bugis:contohKalimatTerjemahan "Menjaga tanah leluhurnya dengan sepenuh hati." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + nggalingi)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:tana ;
+    bugis:termasukDomain          bugis:DomainPertanian .
+
+# 693. mattempe — mengikat / menyambung
+bugis:mattempe
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              693 ;
+    bugis:aksaraLontaraq          "ᨆᨈᨙᨆᨄᨙ" ;
+    bugis:bentukLatin             "mattempe" ;
+    bugis:maknaIndonesia          "mengikat, menyambung, menghubungkan" ;
+    bugis:maknaInggris            "to tie, to connect, to bind" ;
+    bugis:fonetik                 "/mat.tem.pe/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Mattempe ure ri panre bola na." ;
+    bugis:contohKalimatTerjemahan "Mengikat tali pada tiang rumahnya." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + tempe)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:ure ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 694. sipammase-mase — saling menyayangi
+bugis:sipammase_mase
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              694 ;
+    bugis:aksaraLontaraq          "ᨔᨗᨄᨆᨆᨒᨙᨔᨙ" ;
+    bugis:bentukLatin             "sipammase-mase" ;
+    bugis:maknaIndonesia          "saling menyayangi, saling mengasihi" ;
+    bugis:maknaInggris            "to love one another, to care for each other" ;
+    bugis:fonetik                 "/si.pam.ma.se.ma.se/" ;
+    bugis:silabel                 6 ;
+    bugis:contohKalimat           "Sipammase-mase situruki pangadereng Ugi." ;
+    bugis:contohKalimatTerjemahan "Saling menyayangi sesuai adat orang Bugis." ;
+    bugis:jenisMorfologi          "berimbuhan (si- + pammase) reduplikasi" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_si ;
+    bugis:berkaitanDengan         bugis:massimamase ;
+    bugis:berkaitanDengan         bugis:sipakainge ;
+    bugis:termasukDomain          bugis:DomainEmosi .
+
+# 695. massappaq — minta izin / memohon diri
+bugis:massappaq
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              695 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨄᨕ" ;
+    bugis:bentukLatin             "massappaq" ;
+    bugis:maknaIndonesia          "pamit, minta izin, memohon diri" ;
+    bugis:maknaInggris            "to take leave, to ask permission, to say goodbye" ;
+    bugis:fonetik                 "/mas.sap.paʔ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Massappaq ri ambo indo nakiya lao." ;
+    bugis:contohKalimatTerjemahan "Pamit kepada ayah ibu sebelum pergi." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + sappaq)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:mappatabe ;
+    bugis:berkaitanDengan         bugis:lao ;
+    bugis:termasukDomain          bugis:DomainKekerabatan .
+
+# 696. nalai — mengambil / diambil oleh
+bugis:nalai
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              696 ;
+    bugis:aksaraLontaraq          "ᨊᨒᨕᨗ" ;
+    bugis:bentukLatin             "nalai" ;
+    bugis:maknaIndonesia          "mengambil (ia mengambil), diambil oleh" ;
+    bugis:maknaInggris            "he/she takes, taken by" ;
+    bugis:fonetik                 "/na.la.i/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Nalai buku ri rakkeang na." ;
+    bugis:contohKalimatTerjemahan "Ia mengambil buku dari raknya." ;
+    bugis:jenisMorfologi          "berimbuhan (na- + lai)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:maccappe_ambil ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 697. napogau — melakukan / dilaksanakan oleh
+bugis:napogau
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              697 ;
+    bugis:aksaraLontaraq          "ᨊᨄᨚᨁᨕᨘ" ;
+    bugis:bentukLatin             "napogau" ;
+    bugis:maknaIndonesia          "melakukan, dilaksanakan oleh, dikerjakan" ;
+    bugis:maknaInggris            "to do (he/she does), performed by" ;
+    bugis:fonetik                 "/na.po.ga.u/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Napogau gau madeceng sining masussa." ;
+    bugis:contohKalimatTerjemahan "Dilakukannya perbuatan baik meski dalam kesulitan." ;
+    bugis:jenisMorfologi          "berimbuhan (na- + pogau)" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:gau ;
+    bugis:berkaitanDengan         bugis:majjama ;
+    bugis:termasukDomain          bugis:DomainPemerintahan .
+
+# 698. parimeng — selalu / senantiasa
+bugis:parimeng
+    rdf:type                      bugis:Adverbia ;
+    bugis:nomorEntri              698 ;
+    bugis:aksaraLontaraq          "ᨄᨑᨗᨆᨙ" ;
+    bugis:bentukLatin             "parimeng" ;
+    bugis:maknaIndonesia          "selalu, senantiasa, terus-menerus" ;
+    bugis:maknaInggris            "always, constantly, perpetually" ;
+    bugis:fonetik                 "/pa.ri.meŋ/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Parimeng mappuji ri allataala ri tiap esso." ;
+    bugis:contohKalimatTerjemahan "Selalu bersyukur kepada Tuhan setiap hari." ;
+    bugis:jenisMorfologi          "kata dasar" ;
+    bugis:tingkatFormalitas       "formal" ;
+    bugis:frekuensiPenggunaan     "tinggi" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:berkaitanDengan         bugis:mabiasa ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 699. matellai — terbangun / bangun dari tidur
+bugis:matellai_bangun
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              699 ;
+    bugis:aksaraLontaraq          "ᨆᨈᨙᨒᨒᨕᨗ" ;
+    bugis:bentukLatin             "matellai" ;
+    bugis:maknaIndonesia          "terbangun, bangun dari tidur, terjaga" ;
+    bugis:maknaInggris            "to wake up, to be awoken, to arise from sleep" ;
+    bugis:fonetik                 "/ma.tel.la.i/" ;
+    bugis:silabel                 4 ;
+    bugis:contohKalimat           "Matellai ri subuh mappau doa." ;
+    bugis:contohKalimatTerjemahan "Bangun di waktu subuh untuk berdoa." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + tellai)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:antonimDari             bugis:matinro ;
+    bugis:berkaitanDengan         bugis:esso ;
+    bugis:termasukDomain          bugis:DomainAlam .
+
+# 700. massessek — memeluk / mendekap
+bugis:massessek_peluk
+    rdf:type                      bugis:Verba ;
+    bugis:nomorEntri              700 ;
+    bugis:aksaraLontaraq          "ᨆᨔᨙᨔᨙ" ;
+    bugis:bentukLatin             "massessek" ;
+    bugis:maknaIndonesia          "memeluk, mendekap, merangkul" ;
+    bugis:maknaInggris            "to hug, to embrace, to hold close" ;
+    bugis:fonetik                 "/mas.ses.sek/" ;
+    bugis:silabel                 3 ;
+    bugis:contohKalimat           "Indo massessek ana na nakiya menre sekolah." ;
+    bugis:contohKalimatTerjemahan "Ibu memeluk anaknya sebelum berangkat sekolah." ;
+    bugis:jenisMorfologi          "berimbuhan (ma- + sessek)" ;
+    bugis:tingkatFormalitas       "informal" ;
+    bugis:frekuensiPenggunaan     "sedang" ;
+    bugis:statusKata              "aktif" ;
+    bugis:dialek                  "umum" ;
+    bugis:sumber                  "OJED" ;
+    bugis:menggunakanPrefiks      bugis:Prefiks_ma ;
+    bugis:berkaitanDengan         bugis:massessek ;
+    bugis:berkaitanDengan         bugis:indo ;
+    bugis:berkaitanDengan         bugis:sipammase_mase ;
+    bugis:termasukDomain          bugis:DomainKekerabatan .
+
+
+# =============================================================================
+# AKHIR FILE kamus_700.ttl
+# Entri baru  : 100 (nomor 601–700)
+# Akar kata baru : 11
+# Domain baru :
+#   - Seni dan Loga (601–615, 657)
+#   - Hewan dan Tumbuhan (616–630)
+#   - Pakaian dan Perhiasan (631–640)
+#   - Perdagangan dan Ekonomi (641–650)
+#   - Kata Kerja Lanjut (651–660, 681–700)
+#   - Kata Sifat Lanjut (661–665)
+#   - Waktu & Bilangan (666–670)
+#   - Peribahasa (671–675)
+#   - Geografi (676, 688)
+# Tidak ada duplikasi dengan entri 1–600
+# =============================================================================

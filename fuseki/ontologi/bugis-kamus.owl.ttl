@@ -1,0 +1,698 @@
+# =============================================================================
+# ONTOLOGI KAMUS BAHASA BUGIS DENGAN AKSARA LONTARAQ
+# Semantic Web Course — Proyek Akhir
+# Format: Turtle (.ttl) — siap diimport ke Protégé 5.6
+# Author: Anggota A
+# =============================================================================
+
+@prefix bugis:  <http://example.org/bugis#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+# =============================================================================
+# DEKLARASI ONTOLOGI
+# =============================================================================
+
+<http://example.org/bugis>
+    rdf:type            owl:Ontology ;
+    dc:title            "Ontologi Kamus Bahasa Bugis dengan Aksara Lontaraq" ;
+    dc:description      "Ontologi untuk merepresentasikan data leksikal bahasa Bugis beserta aksara Lontaraq, relasi semantik, dan informasi linguistik." ;
+    dc:language         "id" ;
+    dc:subject          "Bahasa Bugis, Aksara Lontaraq, Semantic Web, Kamus Digital" ;
+    owl:versionInfo     "1.0.0" .
+
+
+# =============================================================================
+# KELAS UTAMA (Classes)
+# =============================================================================
+
+# --- Kelas Akar ---
+bugis:KataBugis
+    rdf:type        owl:Class ;
+    rdfs:label      "Kata Bugis"@id ;
+    rdfs:label      "Buginese Word"@en ;
+    rdfs:comment    "Kelas utama yang merepresentasikan setiap entri leksikal dalam kamus bahasa Bugis." .
+
+bugis:AkarKata
+    rdf:type        owl:Class ;
+    rdfs:label      "Akar Kata"@id ;
+    rdfs:label      "Root Word"@en ;
+    rdfs:comment    "Bentuk dasar sebuah kata sebelum mengalami proses afiksasi (penambahan awalan/akhiran)." .
+
+bugis:Frasa
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:KataBugis ;
+    rdfs:label      "Frasa"@id ;
+    rdfs:label      "Phrase"@en ;
+    rdfs:comment    "Gabungan dua kata atau lebih yang membentuk satu kesatuan makna." .
+
+bugis:Peribahasa
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:Frasa ;
+    rdfs:label      "Peribahasa"@id ;
+    rdfs:label      "Proverb"@en ;
+    rdfs:comment    "Ungkapan tradisional Bugis yang mengandung makna kiasan atau nasihat." .
+
+
+# --- Subkelas berdasarkan Kategori Gramatikal ---
+
+bugis:Nomina
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:KataBugis ;
+    rdfs:label      "Nomina"@id ;
+    rdfs:label      "Noun"@en ;
+    rdfs:comment    "Kata benda dalam bahasa Bugis, merujuk pada orang, tempat, benda, atau konsep." .
+
+bugis:Verba
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:KataBugis ;
+    rdfs:label      "Verba"@id ;
+    rdfs:label      "Verb"@en ;
+    rdfs:comment    "Kata kerja dalam bahasa Bugis yang menyatakan tindakan, proses, atau keadaan." .
+
+bugis:Adjektiva
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:KataBugis ;
+    rdfs:label      "Adjektiva"@id ;
+    rdfs:label      "Adjective"@en ;
+    rdfs:comment    "Kata sifat dalam bahasa Bugis yang menerangkan nomina." .
+
+bugis:Adverbia
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:KataBugis ;
+    rdfs:label      "Adverbia"@id ;
+    rdfs:label      "Adverb"@en ;
+    rdfs:comment    "Kata keterangan dalam bahasa Bugis yang menerangkan verba atau adjektiva." .
+
+bugis:Pronomina
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:KataBugis ;
+    rdfs:label      "Pronomina"@id ;
+    rdfs:label      "Pronoun"@en ;
+    rdfs:comment    "Kata ganti dalam bahasa Bugis (orang pertama, kedua, ketiga)." .
+
+bugis:Konjungsi
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:KataBugis ;
+    rdfs:label      "Konjungsi"@id ;
+    rdfs:label      "Conjunction"@en ;
+    rdfs:comment    "Kata penghubung dalam bahasa Bugis." .
+
+bugis:Preposisi
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:KataBugis ;
+    rdfs:label      "Preposisi"@id ;
+    rdfs:label      "Preposition"@en ;
+    rdfs:comment    "Kata depan dalam bahasa Bugis." .
+
+
+# --- Kelas Morfologi ---
+
+bugis:Morfem
+    rdf:type        owl:Class ;
+    rdfs:label      "Morfem"@id ;
+    rdfs:label      "Morpheme"@en ;
+    rdfs:comment    "Unit makna terkecil dalam bahasa Bugis." .
+
+bugis:Prefiks
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:Morfem ;
+    rdfs:label      "Prefiks"@id ;
+    rdfs:label      "Prefix"@en ;
+    rdfs:comment    "Imbuhan yang ditempatkan di awal kata dasar, contoh: ma-, pa-, si-." .
+
+bugis:Sufiks
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:Morfem ;
+    rdfs:label      "Sufiks"@id ;
+    rdfs:label      "Suffix"@en ;
+    rdfs:comment    "Imbuhan yang ditempatkan di akhir kata dasar, contoh: -i, -eng, -na." .
+
+bugis:Infiks
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bugis:Morfem ;
+    rdfs:label      "Infiks"@id ;
+    rdfs:label      "Infix"@en ;
+    rdfs:comment    "Imbuhan yang disisipkan di dalam kata dasar, contoh: -al-, -ar-." .
+
+
+# --- Kelas Domain Semantik ---
+
+bugis:DomainSemantik
+    rdf:type        owl:Class ;
+    rdfs:label      "Domain Semantik"@id ;
+    rdfs:label      "Semantic Domain"@en ;
+    rdfs:comment    "Kategori tematik/domain makna sebuah kata, contoh: pertanian, kekerabatan, alam." .
+
+
+# =============================================================================
+# OBJECT PROPERTIES (Relasi antar Kelas)
+# =============================================================================
+
+# --- Relasi Semantik Leksikal ---
+
+bugis:sinonimDari
+    rdf:type            owl:ObjectProperty ;
+    rdf:type            owl:SymmetricProperty ;
+    rdfs:domain         bugis:KataBugis ;
+    rdfs:range          bugis:KataBugis ;
+    rdfs:label          "sinonim dari"@id ;
+    rdfs:label          "synonym of"@en ;
+    rdfs:comment        "Menghubungkan dua kata yang memiliki makna sama atau sangat mirip." .
+
+bugis:antonimDari
+    rdf:type            owl:ObjectProperty ;
+    rdf:type            owl:SymmetricProperty ;
+    rdfs:domain         bugis:KataBugis ;
+    rdfs:range          bugis:KataBugis ;
+    rdfs:label          "antonim dari"@id ;
+    rdfs:label          "antonym of"@en ;
+    rdfs:comment        "Menghubungkan dua kata yang memiliki makna berlawanan." .
+
+bugis:berkaitanDengan
+    rdf:type            owl:ObjectProperty ;
+    rdf:type            owl:SymmetricProperty ;
+    rdfs:domain         bugis:KataBugis ;
+    rdfs:range          bugis:KataBugis ;
+    rdfs:label          "berkaitan dengan"@id ;
+    rdfs:label          "related to"@en ;
+    rdfs:comment        "Relasi semantik umum antara dua kata yang memiliki kedekatan makna atau konsep." .
+
+bugis:hiponimDari
+    rdf:type            owl:ObjectProperty ;
+    rdfs:domain         bugis:KataBugis ;
+    rdfs:range          bugis:KataBugis ;
+    rdfs:label          "hiponim dari"@id ;
+    rdfs:label          "hyponym of"@en ;
+    rdfs:comment        "Kata yang maknanya lebih spesifik dari kata lain, contoh: 'kuda' adalah hiponim dari 'hewan'." .
+
+bugis:meronim
+    rdf:type            owl:ObjectProperty ;
+    rdfs:domain         bugis:KataBugis ;
+    rdfs:range          bugis:KataBugis ;
+    rdfs:label          "meronim"@id ;
+    rdfs:label          "meronym"@en ;
+    rdfs:comment        "Kata yang maknanya merupakan bagian dari kata lain, contoh: 'jari' adalah meronim dari 'tangan'." .
+
+
+# --- Relasi Morfologi ---
+
+bugis:diturunkanDari
+    rdf:type            owl:ObjectProperty ;
+    rdfs:domain         bugis:KataBugis ;
+    rdfs:range          bugis:AkarKata ;
+    rdfs:label          "diturunkan dari"@id ;
+    rdfs:label          "derived from"@en ;
+    rdfs:comment        "Menyatakan bahwa sebuah kata merupakan turunan dari suatu akar kata." .
+
+bugis:menggunakanPrefiks
+    rdf:type            owl:ObjectProperty ;
+    rdfs:domain         bugis:KataBugis ;
+    rdfs:range          bugis:Prefiks ;
+    rdfs:label          "menggunakan prefiks"@id ;
+    rdfs:label          "uses prefix"@en ;
+    rdfs:comment        "Menghubungkan kata dengan prefiks yang digunakan dalam pembentukannya." .
+
+bugis:menggunakanSufiks
+    rdf:type            owl:ObjectProperty ;
+    rdfs:domain         bugis:KataBugis ;
+    rdfs:range          bugis:Sufiks ;
+    rdfs:label          "menggunakan sufiks"@id ;
+    rdfs:label          "uses suffix"@en ;
+    rdfs:comment        "Menghubungkan kata dengan sufiks yang digunakan dalam pembentukannya." .
+
+
+# --- Relasi Domain ---
+
+bugis:termasukDomain
+    rdf:type            owl:ObjectProperty ;
+    rdfs:domain         bugis:KataBugis ;
+    rdfs:range          bugis:DomainSemantik ;
+    rdfs:label          "termasuk domain"@id ;
+    rdfs:label          "belongs to domain"@en ;
+    rdfs:comment        "Mengkategorikan sebuah kata ke dalam domain semantik tertentu." .
+
+
+# --- Relasi Frasa ---
+
+bugis:komponenFrasa
+    rdf:type            owl:ObjectProperty ;
+    rdfs:domain         bugis:Frasa ;
+    rdfs:range          bugis:KataBugis ;
+    rdfs:label          "komponen frasa"@id ;
+    rdfs:label          "phrase component"@en ;
+    rdfs:comment        "Kata-kata yang menjadi komponen pembentuk sebuah frasa." .
+
+
+# =============================================================================
+# DATA PROPERTIES (Properti Literal / Teks)
+# =============================================================================
+
+# --- Representasi Teks ---
+
+bugis:aksaraLontaraq
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "aksara Lontaraq"@id ;
+    rdfs:label      "Lontaraq script"@en ;
+    rdfs:comment    "Representasi kata dalam aksara Lontaraq asli (Unicode block U+1A00–U+1A1F)." .
+
+bugis:bentukLatin
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "bentuk Latin"@id ;
+    rdfs:label      "Latin transliteration"@en ;
+    rdfs:comment    "Transliterasi kata ke dalam huruf Latin sesuai sistem ejaan bahasa Bugis." .
+
+bugis:aksaraLontaraqAkar
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:AkarKata ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "aksara Lontaraq akar"@id ;
+    rdfs:comment    "Representasi akar kata dalam aksara Lontaraq." .
+
+bugis:bentukLatinAkar
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:AkarKata ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "bentuk Latin akar"@id ;
+    rdfs:comment    "Transliterasi akar kata dalam huruf Latin." .
+
+
+# --- Makna / Definisi ---
+
+bugis:maknaIndonesia
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "makna Indonesia"@id ;
+    rdfs:label      "Indonesian meaning"@en ;
+    rdfs:comment    "Definisi atau terjemahan kata dalam Bahasa Indonesia." .
+
+bugis:maknaInggris
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "makna Inggris"@id ;
+    rdfs:label      "English meaning"@en ;
+    rdfs:comment    "Definisi atau terjemahan kata dalam Bahasa Inggris." .
+
+bugis:definisiBugis
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "definisi Bugis"@id ;
+    rdfs:label      "Buginese definition"@en ;
+    rdfs:comment    "Penjelasan makna kata dalam bahasa Bugis itu sendiri." .
+
+bugis:maknaMajemuk
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "makna majemuk"@id ;
+    rdfs:comment    "Makna lain / polisemi dari kata yang sama dalam konteks berbeda." .
+
+
+# --- Fonologi ---
+
+bugis:fonetik
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "fonetik IPA"@id ;
+    rdfs:label      "IPA phonetics"@en ;
+    rdfs:comment    "Representasi pelafalan kata menggunakan International Phonetic Alphabet (IPA)." .
+
+bugis:silabel
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:integer ;
+    rdfs:label      "jumlah silabel"@id ;
+    rdfs:label      "syllable count"@en ;
+    rdfs:comment    "Jumlah suku kata dalam kata Bugis tersebut." .
+
+
+# --- Contoh Penggunaan ---
+
+bugis:contohKalimat
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "contoh kalimat"@id ;
+    rdfs:label      "example sentence"@en ;
+    rdfs:comment    "Contoh kalimat dalam bahasa Bugis yang menggunakan kata ini." .
+
+bugis:contohKalimatTerjemahan
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "terjemahan contoh kalimat"@id ;
+    rdfs:comment    "Terjemahan contoh kalimat ke dalam Bahasa Indonesia." .
+
+bugis:contohKalimatLontaraq
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "contoh kalimat aksara Lontaraq"@id ;
+    rdfs:comment    "Contoh kalimat dalam aksara Lontaraq." .
+
+
+# --- Informasi Morfologi ---
+
+bugis:jenisMorfologi
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "jenis morfologi"@id ;
+    rdfs:comment    "Keterangan proses morfologi: kata dasar, berimbuhan, majemuk, reduplikasi." .
+
+bugis:bentukReduplikasi
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "bentuk reduplikasi"@id ;
+    rdfs:comment    "Bentuk pengulangan kata (reduplikasi) jika ada, contoh: tau-tau." .
+
+bugis:bentukInformal
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "bentuk informal"@id ;
+    rdfs:comment    "Bentuk kata dalam percakapan sehari-hari yang berbeda dari bentuk formal." .
+
+
+# --- Metadata Entri ---
+
+bugis:sumber
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "sumber"@id ;
+    rdfs:label      "source"@en ;
+    rdfs:comment    "Sumber data kata ini, misal: OJED, Wiktionary, naskah Lontaraq." .
+
+bugis:tingkatFormalitas
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "tingkat formalitas"@id ;
+    rdfs:comment    "Nilai: formal | informal | sastra | dialek. Menunjukkan register penggunaan kata." .
+
+bugis:dialek
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "dialek"@id ;
+    rdfs:comment    "Dialek Bugis tempat kata ini digunakan: Bone, Wajo, Luwu, Sidenreng, dsb." .
+
+bugis:frekuensiPenggunaan
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "frekuensi penggunaan"@id ;
+    rdfs:comment    "Nilai: tinggi | sedang | rendah | arkais. Seberapa sering kata ini dipakai." .
+
+bugis:statusKata
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "status kata"@id ;
+    rdfs:comment    "Nilai: aktif | arkais | pinjaman. Status penggunaan kata dalam bahasa Bugis masa kini." .
+
+bugis:nomorEntri
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:KataBugis ;
+    rdfs:range      xsd:integer ;
+    rdfs:label      "nomor entri"@id ;
+    rdfs:comment    "Nomor urut entri dalam kamus." .
+
+
+# --- Properti Morfem ---
+
+bugis:bentukMorfem
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:Morfem ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "bentuk morfem"@id ;
+    rdfs:comment    "Bentuk literal morfem tersebut, contoh: ma-, -i, -eng." .
+
+bugis:fungsiMorfem
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:Morfem ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "fungsi morfem"@id ;
+    rdfs:comment    "Fungsi gramatikal morfem: membentuk verba aktif, nomina pelaku, dsb." .
+
+
+# --- Properti Domain Semantik ---
+
+bugis:namaDomain
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:domain     bugis:DomainSemantik ;
+    rdfs:range      xsd:string ;
+    rdfs:label      "nama domain"@id ;
+    rdfs:comment    "Nama domain semantik, contoh: kekerabatan, alam, pertanian, religi." .
+
+
+# =============================================================================
+# INSTANCES: Domain Semantik
+# =============================================================================
+
+bugis:DomainKekerabatan
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "kekerabatan" ;
+    rdfs:label      "Kekerabatan"@id ;
+    rdfs:comment    "Kata-kata yang berhubungan dengan hubungan keluarga dan kekerabatan." .
+
+bugis:DomainAlam
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "alam" ;
+    rdfs:label      "Alam"@id ;
+    rdfs:comment    "Kata-kata yang berhubungan dengan alam, lingkungan, dan cuaca." .
+
+bugis:DomainPertanian
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "pertanian" ;
+    rdfs:label      "Pertanian"@id ;
+    rdfs:comment    "Kata-kata yang berkaitan dengan pertanian, peternakan, dan nelayan." .
+
+bugis:DomainReligi
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "religi" ;
+    rdfs:label      "Religi"@id ;
+    rdfs:comment    "Kata-kata yang berkaitan dengan kepercayaan, adat, dan ritual." .
+
+bugis:DomainPemerintahan
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "pemerintahan" ;
+    rdfs:label      "Pemerintahan"@id ;
+    rdfs:comment    "Kata-kata yang berkaitan dengan sistem pemerintahan dan kerajaan Bugis." .
+
+bugis:DomainEmosi
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "emosi" ;
+    rdfs:label      "Emosi"@id ;
+    rdfs:comment    "Kata-kata yang mengekspresikan perasaan dan kondisi mental." .
+
+bugis:DomainGeografi
+    rdf:type        bugis:DomainSemantik ;
+    bugis:namaDomain "geografi" ;
+    rdfs:label      "Geografi"@id ;
+    rdfs:comment    "Kata-kata yang berkaitan dengan tempat, wilayah, dan fitur geografis." .
+
+
+# =============================================================================
+# INSTANCES: Morfem Bugis Umum
+# =============================================================================
+
+bugis:Prefiks_ma
+    rdf:type            bugis:Prefiks ;
+    bugis:bentukMorfem  "ma-" ;
+    bugis:fungsiMorfem  "membentuk verba aktif intransitif" ;
+    rdfs:label          "Prefiks ma-"@id ;
+    rdfs:comment        "Prefiks paling umum dalam bahasa Bugis untuk membentuk kata kerja aktif." .
+
+bugis:Prefiks_pa
+    rdf:type            bugis:Prefiks ;
+    bugis:bentukMorfem  "pa-" ;
+    bugis:fungsiMorfem  "membentuk nomina pelaku atau kausatif" ;
+    rdfs:label          "Prefiks pa-"@id .
+
+bugis:Prefiks_si
+    rdf:type            bugis:Prefiks ;
+    bugis:bentukMorfem  "si-" ;
+    bugis:fungsiMorfem  "membentuk verba resiprokal (saling)" ;
+    rdfs:label          "Prefiks si-"@id .
+
+bugis:Prefiks_mappa
+    rdf:type            bugis:Prefiks ;
+    bugis:bentukMorfem  "mappa-" ;
+    bugis:fungsiMorfem  "membentuk verba kausatif" ;
+    rdfs:label          "Prefiks mappa-"@id .
+
+bugis:Sufiks_i
+    rdf:type            bugis:Sufiks ;
+    bugis:bentukMorfem  "-i" ;
+    bugis:fungsiMorfem  "penanda objek atau imperatif" ;
+    rdfs:label          "Sufiks -i"@id .
+
+bugis:Sufiks_eng
+    rdf:type            bugis:Sufiks ;
+    bugis:bentukMorfem  "-eng" ;
+    bugis:fungsiMorfem  "penanda lokatif atau nominalisasi" ;
+    rdfs:label          "Sufiks -eng"@id .
+
+bugis:Sufiks_na
+    rdf:type            bugis:Sufiks ;
+    bugis:bentukMorfem  "-na" ;
+    bugis:fungsiMorfem  "penanda kepemilikan atau sudah terjadi" ;
+    rdfs:label          "Sufiks -na"@id .
+
+
+# =============================================================================
+# INSTANCES: Contoh Data Kata Bugis
+# (Minimal 5 entri sebagai contoh — lengkapi di file kamus.ttl)
+# =============================================================================
+
+bugis:tana
+    rdf:type                    bugis:Nomina ;
+    bugis:aksaraLontaraq        "ᨈᨊ" ;
+    bugis:bentukLatin           "tana" ;
+    bugis:maknaIndonesia        "tanah, negeri, wilayah" ;
+    bugis:maknaInggris          "land, country, territory" ;
+    bugis:fonetik               "/ta.na/" ;
+    bugis:silabel               2 ;
+    bugis:contohKalimat         "Tana Ugi nenniya tana Mangkasara silaong matu." ;
+    bugis:contohKalimatTerjemahan "Tanah Bugis dan tanah Makassar bersatu selalu." ;
+    bugis:jenisMorfologi        "kata dasar" ;
+    bugis:tingkatFormalitas     "formal" ;
+    bugis:frekuensiPenggunaan   "tinggi" ;
+    bugis:statusKata            "aktif" ;
+    bugis:sumber                "OJED (sealang.net/ojed)" ;
+    bugis:termasukDomain        bugis:DomainGeografi ;
+    bugis:nomorEntri            1 .
+
+bugis:ugi
+    rdf:type                    bugis:Nomina ;
+    bugis:aksaraLontaraq        "ᨕᨘᨁᨗ" ;
+    bugis:bentukLatin           "ugi" ;
+    bugis:maknaIndonesia        "orang Bugis, suku Bugis" ;
+    bugis:maknaInggris          "Buginese person, Buginese ethnic group" ;
+    bugis:fonetik               "/u.gi/" ;
+    bugis:silabel               2 ;
+    bugis:contohKalimat         "Ia tau ugi mappesona ri tauwe." ;
+    bugis:contohKalimatTerjemahan "Ia orang Bugis yang baik hati." ;
+    bugis:tingkatFormalitas     "formal" ;
+    bugis:frekuensiPenggunaan   "tinggi" ;
+    bugis:statusKata            "aktif" ;
+    bugis:sumber                "OJED (sealang.net/ojed)" ;
+    bugis:termasukDomain        bugis:DomainKekerabatan ;
+    bugis:nomorEntri            2 .
+
+bugis:pinasa
+    rdf:type                    bugis:Nomina ;
+    bugis:aksaraLontaraq        "ᨄᨗᨂᨒᨈᨘ" ;
+    bugis:bentukLatin           "pinasa" ;
+    bugis:maknaIndonesia        "pikiran, perasaan, keinginan" ;
+    bugis:maknaInggris          "mind, feeling, desire" ;
+    bugis:fonetik               "/pi.na.sa/" ;
+    bugis:silabel               3 ;
+    bugis:contohKalimat         "Aga pinasamu ri laleng atimmu?" ;
+    bugis:contohKalimatTerjemahan "Apa yang ada dalam pikiranmu?" ;
+    bugis:jenisMorfologi        "turunan" ;
+    bugis:tingkatFormalitas     "formal" ;
+    bugis:frekuensiPenggunaan   "sedang" ;
+    bugis:statusKata            "aktif" ;
+    bugis:sumber                "OJED (sealang.net/ojed)" ;
+    bugis:termasukDomain        bugis:DomainEmosi ;
+    bugis:diturunkanDari        bugis:akar_nasa ;
+    bugis:nomorEntri            3 .
+
+bugis:mabbicara
+    rdf:type                    bugis:Verba ;
+    bugis:aksaraLontaraq        "ᨆᨅᨗᨌᨑ" ;
+    bugis:bentukLatin           "mabbicara" ;
+    bugis:maknaIndonesia        "berbicara, bermusyawarah, berunding" ;
+    bugis:maknaInggris          "to speak, to deliberate, to discuss" ;
+    bugis:fonetik               "/mab.bi.ca.ra/" ;
+    bugis:silabel               4 ;
+    bugis:contohKalimat         "Narekko engka masalah, mappasilaingeng mabbicara." ;
+    bugis:contohKalimatTerjemahan "Jika ada masalah, sebaiknya saling bermusyawarah." ;
+    bugis:jenisMorfologi        "berimbuhan" ;
+    bugis:tingkatFormalitas     "formal" ;
+    bugis:frekuensiPenggunaan   "tinggi" ;
+    bugis:statusKata            "aktif" ;
+    bugis:sumber                "OJED (sealang.net/ojed)" ;
+    bugis:diturunkanDari        bugis:akar_bicara ;
+    bugis:menggunakanPrefiks    bugis:Prefiks_ma ;
+    bugis:nomorEntri            4 .
+
+bugis:malomo
+    rdf:type                    bugis:Adjektiva ;
+    bugis:aksaraLontaraq        "ᨆᨒᨚᨆᨚ" ;
+    bugis:bentukLatin           "malomo" ;
+    bugis:maknaIndonesia        "mudah, gampang, ringan" ;
+    bugis:maknaInggris          "easy, simple, light" ;
+    bugis:fonetik               "/ma.lo.mo/" ;
+    bugis:silabel               3 ;
+    bugis:contohKalimat         "Malomo iana naita." ;
+    bugis:contohKalimatTerjemahan "Mudah dia menemukannya." ;
+    bugis:tingkatFormalitas     "formal" ;
+    bugis:frekuensiPenggunaan   "tinggi" ;
+    bugis:statusKata            "aktif" ;
+    bugis:sumber                "OJED (sealang.net/ojed)" ;
+    bugis:antonimDari           bugis:masussa ;
+    bugis:nomorEntri            5 .
+
+bugis:masussa
+    rdf:type                    bugis:Adjektiva ;
+    bugis:aksaraLontaraq        "ᨆᨔᨘᨔ" ;
+    bugis:bentukLatin           "masussa" ;
+    bugis:maknaIndonesia        "susah, sulit, berat" ;
+    bugis:maknaInggris          "difficult, hard, heavy" ;
+    bugis:fonetik               "/ma.sus.sa/" ;
+    bugis:silabel               3 ;
+    bugis:contohKalimat         "Masussa uwisseng." ;
+    bugis:contohKalimatTerjemahan "Sulit saya mengerti." ;
+    bugis:tingkatFormalitas     "formal" ;
+    bugis:frekuensiPenggunaan   "tinggi" ;
+    bugis:statusKata            "aktif" ;
+    bugis:sumber                "OJED (sealang.net/ojed)" ;
+    bugis:antonimDari           bugis:malomo ;
+    bugis:nomorEntri            6 .
+
+
+# =============================================================================
+# INSTANCES: Akar Kata
+# =============================================================================
+
+bugis:akar_nasa
+    rdf:type                    bugis:AkarKata ;
+    bugis:bentukLatinAkar       "nasa" ;
+    bugis:aksaraLontaraqAkar    "ᨂᨒᨈ" ;
+    rdfs:label                  "Akar: nasa"@id ;
+    rdfs:comment                "Akar kata 'nasa' bermakna dasar: pikir, rasa." .
+
+bugis:akar_bicara
+    rdf:type                    bugis:AkarKata ;
+    bugis:bentukLatinAkar       "bicara" ;
+    bugis:aksaraLontaraqAkar    "ᨅᨗᨌᨑ" ;
+    rdfs:label                  "Akar: bicara"@id ;
+    rdfs:comment                "Akar kata 'bicara' bermakna dasar: tutur, ucap. Menurunkan: mabbicara, pabbicara, sibicara." .
+
+bugis:akar_lomo
+    rdf:type                    bugis:AkarKata ;
+    bugis:bentukLatinAkar       "lomo" ;
+    bugis:aksaraLontaraqAkar    "ᨒᨚᨆᨚ" ;
+    rdfs:label                  "Akar: lomo"@id ;
+    rdfs:comment                "Akar kata 'lomo' bermakna dasar: mudah, ringan." .
+
+# =============================================================================
+# AKHIR FILE ONTOLOGI
+# =============================================================================
