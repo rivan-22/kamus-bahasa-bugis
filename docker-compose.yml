@@ -1,0 +1,54 @@
+services:
+
+  # ── Apache Jena Fuseki 6 (TDB2 persistent) ──────────────────────────────────
+  fuseki:
+    image: aksw/fuseki-vanilla:6.1.0
+    platform: linux/amd64
+    container_name: kamus-bugis-fuseki
+    init: true
+    restart: unless-stopped
+    ports:
+      - "3030:3030"
+    environment:
+      JVM_ARGS: "-Xmx2g -Xms512m"
+    volumes:
+      # Bind mount Fuseki run directory
+      - ./fuseki/run:/app/fuseki/run
+    networks:
+      - kamus-net
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3030/$/ping || exit 1"]
+      interval: 30s
+      timeout: 10s
+      start_period: 90s
+      retries: 5
+
+  # ── Spring Boot Backend ──────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: kamus-bugis-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      # Uses internal Docker network hostname "fuseki" – NOT localhost
+      FUSEKI_URL: ${FUSEKI_URL:-http://fuseki:3030}
+      FUSEKI_DATASET: ${FUSEKI_DATASET:-bugis}
+      # Groq AI API key untuk fitur Tanya AI (RAG)
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+      fuseki:
+        condition: service_healthy
+    networks:
+      - kamus-net
+
+# ── Named Volumes (persistent across restarts) ──────────────────────────────
+# Fuseki uses bind mount, so no named volumes needed here
+
+# ── Internal Network ─────────────────────────────────────────────────────────
+networks:
+  kamus-net:
+    driver: bridge
