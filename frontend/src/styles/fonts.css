@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Buginese&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.font-lontara {
+  font-family: 'Noto Sans Buginese', 'Noto Sans', serif;
+  font-feature-settings: "liga" 1;
+}
+
+.font-display {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
