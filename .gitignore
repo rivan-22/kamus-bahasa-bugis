@@ -1,0 +1,57 @@
+# =========================
+# 1. Frontend (React / Vite)
+# =========================
+# Mengabaikan library lokal dan hasil build
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# =========================
+# 2. Backend (Spring Boot / Maven)
+# =========================
+# Mengabaikan hasil kompilasi Java
+target/
+**/target/
+*.jar
+*.war
+*.log
+# Mengabaikan Java crash logs
+hs_err_pid*
+
+# =========================
+# 3. Apache Jena Fuseki
+# =========================
+# Mengabaikan database lokal dan log server agar repo tidak bengkak
+fuseki/run/
+fuseki/DB/
+fuseki/databases/
+fuseki/logs/
+fuseki/fuseki.pid
+fuseki/system/
+fuseki/tdb.lock
+
+# =========================
+# 4. Docker & Environment
+# =========================
+# Jangan commit file .env (berisi password/secret)
+.env
+# Volume data Docker lokal
+fuseki_databases/
+
+# =========================
+# 5. OS & IDE (Mac, Windows, VS Code)
+# =========================
+# Mengabaikan file sistem tersembunyi dan setting teks editor
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.iml
+.settings/
+.classpath
+.project
