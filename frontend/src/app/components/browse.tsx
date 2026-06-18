@@ -86,11 +86,31 @@ export function Browse({ onSelectWord }: BrowseProps) {
   // Initial fetch + react to URL param
   useEffect(() => {
     const q = searchParams.get("q") ?? "";
-    setFilterText(q);
+    setFilterText((prev) => (prev !== q ? q : prev));
     setFilterQuery(q);
     setPage(0);
     fetchData(0, q);
   }, [searchParams, fetchData]);
+
+  // Debounced live search while typing
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const currentUrlQuery = searchParams.get("q") ?? "";
+      const trimmedFilterText = filterText.trim();
+
+      if (trimmedFilterText === currentUrlQuery.trim()) {
+        return;
+      }
+
+      if (trimmedFilterText) {
+        navigate(`/jelajah?q=${encodeURIComponent(trimmedFilterText)}`, { replace: true });
+      } else {
+        navigate("/jelajah", { replace: true });
+      }
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [filterText, navigate, searchParams]);
 
   // Page change
   useEffect(() => {
@@ -105,6 +125,8 @@ export function Browse({ onSelectWord }: BrowseProps) {
     fetchData(0, filterText);
     if (filterText.trim()) {
       navigate(`/jelajah?q=${encodeURIComponent(filterText)}`);
+    } else {
+      navigate("/jelajah");
     }
   };
 
