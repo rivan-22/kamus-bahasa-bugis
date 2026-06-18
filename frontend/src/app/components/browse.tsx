@@ -209,10 +209,10 @@ export function Browse({ onSelectWord }: BrowseProps) {
                     onClick={() => onSelectWord ? onSelectWord(wordId) : navigate(`/jelajah?kata=${wordId}`)}
                     className="w-full block rounded-2xl bg-white border border-slate-200 hover:border-[#0E7C86] hover:shadow-sm transition-all p-5 text-left"
                   >
-                    <div className="flex items-center gap-6 flex-wrap">
+                    <div className="flex items-start gap-4">
                       <div
-                        className="font-lontara text-[#0F3D6E] leading-none w-16 shrink-0"
-                        style={{ fontSize: "2.25rem" }}
+                        className="font-lontara text-[#0F3D6E] leading-normal w-20 shrink-0 overflow-hidden"
+                        style={{ fontSize: "1.75rem" }}
                       >
                         {e.lontaraq}
                       </div>
