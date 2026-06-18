@@ -41,10 +41,8 @@ export function Footer() {
           <div>
             <div className="text-xs uppercase tracking-widest text-slate-400 mb-4">Tim Pengembang</div>
             <ul className="space-y-3 text-sm">
-              <Dev name="Andi Mappangara" role="Lead Linguist" />
-              <Dev name="Nur Aisyah Tahir" role="UI/UX Designer" />
-              <Dev name="Rizky Pratama" role="Full-stack Engineer" />
-              <Dev name="Dr. Halilintar Latief" role="Penasehat Akademik" />
+              <Dev name="Eusthachius Rivan Verianto Norel" role="Backend" />
+              <Dev name="Muhammad Fadhli Ramadhan Aulia" role="Frontend" />
             </ul>
           </div>
         </div>
