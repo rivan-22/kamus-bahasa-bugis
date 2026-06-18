@@ -21,11 +21,11 @@ public class KamusController {
               ?id bugis:aksaraLontaraq ?lontaraq ;
                   bugis:bentukLatin    ?latin ;
                   bugis:maknaIndonesia ?makna .
-              FILTER(CONTAINS(LCASE(?makna), LCASE("%s")))
+              FILTER(CONTAINS(LCASE(?makna), LCASE("%s")) || CONTAINS(LCASE(?latin), LCASE("%s")))
             }
             ORDER BY ?latin
             LIMIT 20
-            """.formatted(q);
+            """.formatted(q, q);
         
         return ResponseEntity.ok(sparqlService.query(sparql));
     }
