@@ -1,4 +1,5 @@
-import { BookOpen, Network, Sparkles, Library, Volume2, History } from "lucide-react";
+import { BookOpen, Network, Sparkles } from "lucide-react";
+import { Link } from "react-router";
 
 const features = [
   {
@@ -7,6 +8,7 @@ const features = [
     icon: BookOpen,
     tone: "blue",
     id: "jelajah",
+    path: "/jelajah",
   },
   {
     title: "Visualisasi Semantik",
@@ -14,6 +16,7 @@ const features = [
     icon: Network,
     tone: "teal",
     id: "visualisasi",
+    path: "/visualisasi",
   },
   {
     title: "Tanya AI",
@@ -21,24 +24,7 @@ const features = [
     icon: Sparkles,
     tone: "amber",
     id: "ai",
-  },
-  {
-    title: "Korpus Lontaraq",
-    desc: "Arsip naskah I La Galigo dan sureq pilihan dengan transliterasi.",
-    icon: Library,
-    tone: "coral",
-  },
-  {
-    title: "Pelafalan",
-    desc: "Audio pelafalan kata oleh penutur asli dari berbagai daerah Sulawesi Selatan.",
-    icon: Volume2,
-    tone: "blue",
-  },
-  {
-    title: "Etimologi",
-    desc: "Telusuri sejarah dan perubahan makna kata sepanjang abad.",
-    icon: History,
-    tone: "teal",
+    path: "/ai",
   },
 ];
 
@@ -46,12 +32,11 @@ const toneMap: Record<string, { bg: string; text: string; ring: string }> = {
   blue: { bg: "bg-blue-50", text: "text-[#0F3D6E]", ring: "ring-blue-100" },
   teal: { bg: "bg-teal-50", text: "text-[#0E7C86]", ring: "ring-teal-100" },
   amber: { bg: "bg-amber-50", text: "text-amber-700", ring: "ring-amber-100" },
-  coral: { bg: "bg-orange-50", text: "text-[#D6553E]", ring: "ring-orange-100" },
 };
 
 export function Features() {
   return (
-    <section id="jelajah" className="py-20 lg:py-28 bg-white">
+    <section id="jelajah" className="pt-12 pb-20 lg:pt-16 lg:pb-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-14">
           <div className="text-xs uppercase tracking-widest text-[#0E7C86] mb-3">Fitur Unggulan</div>
@@ -70,10 +55,11 @@ export function Features() {
             const t = toneMap[f.tone];
             const Icon = f.icon;
             return (
-              <div
+              <Link
                 key={f.title}
                 id={f.id}
-                className="group p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all"
+                to={f.path}
+                className="group block p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0E7C86]"
               >
                 <div className={`w-11 h-11 rounded-xl ${t.bg} ${t.text} ring-4 ${t.ring} flex items-center justify-center mb-4`}>
                   <Icon className="w-5 h-5" />
@@ -82,7 +68,7 @@ export function Features() {
                   {f.title}
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{f.desc}</p>
-              </div>
+              </Link>
             );
           })}
         </div>
